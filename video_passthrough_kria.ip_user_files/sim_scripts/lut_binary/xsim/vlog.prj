@@ -1,0 +1,6 @@
+verilog xil_defaultlib --include "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/include" \
+"../../../../video_passthrough_kria.gen/sources_1/ip/lut_binary/sim/lut_binary.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

@@ -1,0 +1,70 @@
+10:28:30 **** Build of configuration Debug for project KriaApp ****
+make all 
+'Building file: ../src/demosaic.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/demosaic.o" -IC:/Users/hhhh/rekonfigi/video_passthrough_kria/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/demosaic.d" -MT"src/demosaic.o" -o "src/demosaic.o" "../src/demosaic.c"
+'Finished building: ../src/demosaic.c'
+' '
+'Building file: ../src/displayport.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/displayport.o" -IC:/Users/hhhh/rekonfigi/video_passthrough_kria/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/displayport.d" -MT"src/displayport.o" -o "src/displayport.o" "../src/displayport.c"
+'Finished building: ../src/displayport.c'
+' '
+'Building file: ../src/gamma_lut.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gamma_lut.o" -IC:/Users/hhhh/rekonfigi/video_passthrough_kria/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/gamma_lut.d" -MT"src/gamma_lut.o" -o "src/gamma_lut.o" "../src/gamma_lut.c"
+In file included from ../src/gamma_lut.c:34:
+../src/xilinx-gamma-coeff.h:3898:19: warning: 'xgamma10_curves' defined but not used [-Wunused-variable]
+ 3898 | static const u16 *xgamma10_curves[GAMMA_CURVE_LENGTH] =  {
+      |                   ^~~~~~~~~~~~~~~
+'Finished building: ../src/gamma_lut.c'
+' '
+'Building file: ../src/imx219.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/imx219.o" -IC:/Users/hhhh/rekonfigi/video_passthrough_kria/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/imx219.d" -MT"src/imx219.o" -o "src/imx219.o" "../src/imx219.c"
+'Finished building: ../src/imx219.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -IC:/Users/hhhh/rekonfigi/video_passthrough_kria/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/mipi.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/mipi.o" -IC:/Users/hhhh/rekonfigi/video_passthrough_kria/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/mipi.d" -MT"src/mipi.o" -o "src/mipi.o" "../src/mipi.c"
+'Finished building: ../src/mipi.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -IC:/Users/hhhh/rekonfigi/video_passthrough_kria/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/tpg.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tpg.o" -IC:/Users/hhhh/rekonfigi/video_passthrough_kria/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/tpg.d" -MT"src/tpg.o" -o "src/tpg.o" "../src/tpg.c"
+'Finished building: ../src/tpg.c'
+' '
+'Building file: ../src/vdma.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/vdma.o" -IC:/Users/hhhh/rekonfigi/video_passthrough_kria/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/vdma.d" -MT"src/vdma.o" -o "src/vdma.o" "../src/vdma.c"
+'Finished building: ../src/vdma.c'
+' '
+'Building file: ../src/vtc.c'
+'Invoking: ARM v8 gcc compiler'
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/vtc.o" -IC:/Users/hhhh/rekonfigi/video_passthrough_kria/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/vtc.d" -MT"src/vtc.o" -o "src/vtc.o" "../src/vtc.c"
+'Finished building: ../src/vtc.c'
+' '
+'Building target: KriaApp.elf'
+'Invoking: ARM v8 gcc linker'
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/hhhh/rekonfigi/video_passthrough_kria/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_psu_cortexa53_0/bsplib/lib -o "KriaApp.elf"  ./src/demosaic.o ./src/displayport.o ./src/gamma_lut.o ./src/imx219.o ./src/main.o ./src/mipi.o ./src/platform.o ./src/tpg.o ./src/vdma.o ./src/vtc.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: KriaApp.elf'
+' '
+'Invoking: ARM v8 Print Size'
+aarch64-none-elf-size KriaApp.elf  |tee "KriaApp.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 140372	  87880	  28636	 256888	  3eb78	KriaApp.elf
+'Finished building: KriaApp.elf.size'
+' '
+
+10:28:34 Build Finished (took 3s.691ms)
+
