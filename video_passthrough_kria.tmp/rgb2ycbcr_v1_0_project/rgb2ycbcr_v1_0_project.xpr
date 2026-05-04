@@ -6,7 +6,7 @@
 <Project Version="7" Minor="61" Path="c:/users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.tmp/rgb2ycbcr_v1_0_project/rgb2ycbcr_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="e8cf2e32d4794df5a56b9ab06b20042c"/>
+    <Option Name="Id" Val="bdbd191696414e519fc00999b6f41e20"/>
     <Option Name="Part" Val="xck26-sfvc784-2LV-c"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -91,7 +91,7 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../../../../../Users/hhhh/rekonfigi/rgb2ycbcr/rgb2ycbcr.srcs/sources_1/new/rgb2ycbcr.v">
+      <File Path="$PPRDIR/../../../../../../Users/hhhh/rekonfigi/video_passthrough_kria/ip_repo/ycbcr/src/adder_0/adder_0.xci">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -99,76 +99,37 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../Users/hhhh/rekonfigi/video_passthrough_kria/ip_repo/src/mult_gen_0/mult_gen_0.xci">
+      <File Path="$PPRDIR/../../../../../../Users/hhhh/rekonfigi/video_passthrough_kria/ip_repo/ycbcr/src/multiplier_0/multiplier_0.xci">
         <FileInfo>
           <Attr Name="Library" Val=""/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../Users/hhhh/rekonfigi/video_passthrough_kria/ip_repo/src/c_addsub_0/c_addsub_0.xci">
+      <File Path="$PPRDIR/../../../../../../Users/hhhh/rekonfigi/video_passthrough_kria/ip_repo/ycbcr/src/delay_line.v">
         <FileInfo>
           <Attr Name="Library" Val=""/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../Users/hhhh/rekonfigi/video_passthrough_kria/ip_repo/src/delay_line.v">
+      <File Path="$PPRDIR/../../../../../../Users/hhhh/rekonfigi/video_passthrough_kria/ip_repo/ycbcr/src/rgb2ycbcr.v">
         <FileInfo>
           <Attr Name="Library" Val=""/>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../../../../Users/hhhh/rekonfigi/video_passthrough_kria/ip_repo/src/rgb2ycbcr.v">
-        <FileInfo>
-          <Attr Name="Library" Val=""/>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../Users/hhhh/rekonfigi/rgb2ycbcr/rgb2ycbcr.srcs/sources_1/ip/mult_gen_0/mult_gen_0.xci">
-        <FileInfo>
-          <Attr Name="Library" Val=""/>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../Users/hhhh/rekonfigi/rgb2ycbcr/rgb2ycbcr.srcs/sources_1/ip/c_addsub_0/c_addsub_0.xci">
-        <FileInfo>
-          <Attr Name="Library" Val=""/>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../Users/hhhh/rekonfigi/rgb2ycbcr/rgb2ycbcr.srcs/sources_1/imports/new/delay_line.v">
-        <FileInfo>
-          <Attr Name="Library" Val=""/>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../../../../../../Users/hhhh/rekonfigi/video_passthrough_kria/ip_repo/component.xml">
+      <File Path="$PPRDIR/../../../../../../Users/hhhh/rekonfigi/video_passthrough_kria/ip_repo/ycbcr/component.xml">
         <FileInfo SFType="IPXACT"/>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="rgb2ycbcr"/>
-        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../../Users/hhhh/rekonfigi/rgb2ycbcr/rgb2ycbcr.srcs/sources_1/new/rgb2ycbcr.v"/>
+        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../../Users/hhhh/rekonfigi/video_passthrough_kria/ip_repo/ycbcr/src/rgb2ycbcr.v"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -178,7 +139,7 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
-      <File Path="$PPRDIR/../../../../../../Users/hhhh/rekonfigi/rgb2ycbcr/rgb2ycbcr.srcs/sim_1/new/tb_rgb2ycbcr.v">
+      <File Path="$PPRDIR/../../../../../../Users/hhhh/rekonfigi/video_passthrough_kria/ip_repo/ycbcr/src/tb_rgb2ycbcr.v">
         <FileInfo>
           <Attr Name="Library" Val=""/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -188,7 +149,7 @@
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="tb_rgb2ycbcr"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TopRTLFile" Val="$PPRDIR/../../../../../../Users/hhhh/rekonfigi/video_passthrough_kria/ip_repo/ycbcr/src/tb_rgb2ycbcr.v"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SelectedSimModel" Val="rtl"/>

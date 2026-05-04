@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="rgb2ycbcr_0_synth_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1777281321">
+<GenRun Id="rgb2ycbcr_0_synth_1" LaunchPart="xck26-sfvc784-2LV-c" LaunchTime="1777851697">
   <File Type="PA-TCL" Name="rgb2ycbcr_0.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="rgb2ycbcr_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="rgb2ycbcr_0_reports.tcl"/>
   <File Type="RDS-RDS" Name="rgb2ycbcr_0.vds"/>
   <File Type="RDS-UTIL" Name="rgb2ycbcr_0_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="rgb2ycbcr_0_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="rgb2ycbcr_0.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="rgb2ycbcr_0_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="rgb2ycbcr_0_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/rgb2ycbcr_0">
     <File Path="$PSRCDIR/sources_1/ip/rgb2ycbcr_0/rgb2ycbcr_0.xci">
       <FileInfo>
@@ -47,7 +50,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

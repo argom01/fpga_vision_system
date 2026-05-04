@@ -3,7 +3,7 @@
   "ip_inst": {
     "xci_name": "rgb2ycbcr_0",
     "component_reference": "xilinx.com:user:rgb2ycbcr:1.0",
-    "ip_revision": "6",
+    "ip_revision": "7",
     "gen_directory": "../../../../video_passthrough_kria.gen/sources_1/ip/rgb2ycbcr_0",
     "parameters": {
       "component_parameters": {
@@ -26,7 +26,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
-        "IPREVISION": [ { "value": "6" } ],
+        "IPREVISION": [ { "value": "7" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../video_passthrough_kria.gen/sources_1/ip/rgb2ycbcr_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

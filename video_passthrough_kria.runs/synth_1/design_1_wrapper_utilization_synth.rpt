@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Sun Apr 26 22:55:05 2026
+| Date         : Mon May  4 09:18:27 2026
 | Host         : DESKTOP-I43IRA7 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -32,17 +32,17 @@ Table of Contents
 +----------------------------+-------+-------+------------+-----------+-------+
 |          Site Type         |  Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+-------+-------+------------+-----------+-------+
-| CLB LUTs*                  | 21049 |     0 |          0 |    117120 | 17.97 |
-|   LUT as Logic             | 19291 |     0 |          0 |    117120 | 16.47 |
-|   LUT as Memory            |  1758 |     0 |          0 |     57600 |  3.05 |
-|     LUT as Distributed RAM |   734 |     0 |            |           |       |
+| CLB LUTs*                  | 21187 |     0 |          0 |    117120 | 18.09 |
+|   LUT as Logic             | 19417 |     0 |          0 |    117120 | 16.58 |
+|   LUT as Memory            |  1770 |     0 |          0 |     57600 |  3.07 |
+|     LUT as Distributed RAM |   746 |     0 |            |           |       |
 |     LUT as Shift Register  |  1024 |     0 |            |           |       |
-| CLB Registers              | 28780 |     0 |          0 |    234240 | 12.29 |
-|   Register as Flip Flop    | 28780 |     0 |          0 |    234240 | 12.29 |
+| CLB Registers              | 28804 |     0 |          0 |    234240 | 12.30 |
+|   Register as Flip Flop    | 28804 |     0 |          0 |    234240 | 12.30 |
 |   Register as Latch        |     0 |     0 |          0 |    234240 |  0.00 |
 | CARRY8                     |   485 |     0 |          0 |     14640 |  3.31 |
-| F7 Muxes                   |   231 |     0 |          0 |     58560 |  0.39 |
-| F8 Muxes                   |     5 |     0 |          0 |     29280 |  0.02 |
+| F7 Muxes                   |   237 |     0 |          0 |     58560 |  0.40 |
+| F8 Muxes                   |     8 |     0 |          0 |     29280 |  0.03 |
 | F9 Muxes                   |     0 |     0 |          0 |     14640 |  0.00 |
 +----------------------------+-------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -64,7 +64,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 78    |          Yes |           - |          Set |
 | 304   |          Yes |           - |        Reset |
 | 870   |          Yes |         Set |            - |
-| 27528 |          Yes |       Reset |            - |
+| 27552 |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -101,7 +101,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| Bonded IOB |    9 |     0 |          0 |       189 |  4.76 |
+| Bonded IOB |   13 |     0 |          0 |       189 |  6.88 |
 +------------+------+-------+------------+-----------+-------+
 
 
@@ -162,34 +162,35 @@ Warning! LUT value is adjusted to account for LUT combining.
 +------------------+-------+---------------------+
 |     Ref Name     |  Used | Functional Category |
 +------------------+-------+---------------------+
-| FDRE             | 27528 |            Register |
-| LUT6             |  6313 |                 CLB |
-| LUT3             |  4991 |                 CLB |
-| LUT5             |  3867 |                 CLB |
-| LUT4             |  3358 |                 CLB |
-| LUT2             |  2941 |                 CLB |
+| FDRE             | 27552 |            Register |
+| LUT6             |  6413 |                 CLB |
+| LUT3             |  4993 |                 CLB |
+| LUT5             |  3885 |                 CLB |
+| LUT4             |  3368 |                 CLB |
+| LUT2             |  2942 |                 CLB |
 | LUT1             |  1567 |                 CLB |
 | RAMD32           |  1276 |                 CLB |
 | FDSE             |   870 |            Register |
 | SRL16E           |   856 |                 CLB |
 | CARRY8           |   485 |                 CLB |
 | FDCE             |   304 |            Register |
-| MUXF7            |   231 |                 CLB |
+| MUXF7            |   237 |                 CLB |
 | RAMS32           |   182 |                 CLB |
 | SRLC32E          |   168 |                 CLB |
 | FDPE             |    78 |            Register |
 | RAMB36E2         |    29 |            BLOCKRAM |
 | DSP48E2          |    21 |          Arithmetic |
 | RAMB18E2         |    18 |            BLOCKRAM |
-| MUXF8            |     5 |                 CLB |
-| IBUFCTRL         |     5 |              Others |
+| RAMS64E          |    12 |                 CLB |
+| IBUFCTRL         |     9 |              Others |
+| MUXF8            |     8 |                 CLB |
+| INBUF            |     6 |                 I/O |
 | BUFGCE           |     5 |               Clock |
 | RX_BITSLICE      |     3 |                 I/O |
 | DPHY_DIFFINBUF   |     3 |              Others |
 | URAM288          |     2 |            BLOCKRAM |
 | OBUFT            |     2 |                 I/O |
 | MMCME4_ADV       |     2 |               Clock |
-| INBUF            |     2 |                 I/O |
 | BUFG_PS          |     2 |               Clock |
 | PS8              |     1 |            Advanced |
 | PLLE4_ADV        |     1 |               Clock |
@@ -204,7 +205,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-------------+------+
 |   Ref Name  | Used |
 +-------------+------+
-| rgb2ycbcr_0 |    1 |
+| rgb2ycbcr_1 |    1 |
+| rgb2hsv_0   |    1 |
 +-------------+------+
 
 

@@ -3,6 +3,15 @@
 
 # XDC: imports/project_4/kria.xdc
 
+# IP: ip/rgb2hsv_0/rgb2hsv_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==rgb2hsv_0 || ORIG_REF_NAME==rgb2hsv_0} -quiet] -quiet
+
+# IP: ip/lut_binary/lut_binary.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lut_binary || ORIG_REF_NAME==lut_binary} -quiet] -quiet
+
+# IP: ip/lut/lut.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lut || ORIG_REF_NAME==lut} -quiet] -quiet
+
 # Block Designs: bd/design_1/design_1.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1 || ORIG_REF_NAME==design_1} -quiet] -quiet
 
@@ -180,8 +189,17 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_pr
 # IP: bd/design_1/ip/design_1_vision_system_0_0/design_1_vision_system_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_vision_system_0_0 || ORIG_REF_NAME==design_1_vision_system_0_0} -quiet] -quiet
 
-# IP: ip/rgb2ycbcr_0/rgb2ycbcr_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==rgb2ycbcr_0 || ORIG_REF_NAME==rgb2ycbcr_0} -quiet] -quiet
+# IP: ip/rgb2ycbcr_1/rgb2ycbcr_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==rgb2ycbcr_1 || ORIG_REF_NAME==rgb2ycbcr_1} -quiet] -quiet
+
+# IP: ip/rgb2hsv_0/rgb2hsv_0.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==rgb2hsv_0 || ORIG_REF_NAME==rgb2hsv_0} -quiet] -quiet
+
+# IP: ip/lut_binary/lut_binary.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lut_binary || ORIG_REF_NAME==lut_binary} -quiet] -quiet
+
+# IP: ip/lut/lut.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==lut || ORIG_REF_NAME==lut} -quiet] -quiet
 
 # IP: bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_ds_0 || ORIG_REF_NAME==design_1_auto_ds_0} -quiet] -quiet
@@ -194,6 +212,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_au
 
 # IP: bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_1_auto_pc_1 || ORIG_REF_NAME==design_1_auto_pc_1} -quiet] -quiet
+
+# XDC: c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/ip/lut_binary/lut_binary_ooc.xdc
+
+# XDC: c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/ip/lut/lut_ooc.xdc
 
 # XDC: c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc
 # DONT_TOUCH constraint suppressed by parent sub-design file.
@@ -334,6 +356,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 
 # XDC: c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/bd/design_1/ip/design_1_zynq_ultra_ps_e_0_0/design_1_zynq_ultra_ps_e_0_0.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_zynq_ultra_ps_e_0_0 || ORIG_REF_NAME==design_1_zynq_ultra_ps_e_0_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/ip/lut_binary/lut_binary_ooc.xdc
+
+# XDC: c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/ip/lut/lut_ooc.xdc
 
 # XDC: c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/bd/design_1/ip/design_1_auto_ds_0/design_1_auto_ds_0_clocks.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_1_auto_ds_0 || ORIG_REF_NAME==design_1_auto_ds_0} -quiet] {/inst } ]/inst ] -quiet] -quiet

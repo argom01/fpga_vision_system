@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol opened at Sun Apr 26 22:47:37 +0200 2026
+INFO-FLOW: Workspace C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol opened at Mon May 04 01:54:25 +0200 2026
 Execute       send_msg_by_id INFO @200-1505@%s%s default  vivado 
 INFO: [HLS 200-1505] Using default flow_target 'vivado'
 Execute       send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vivado' config_interface -m_axi_latency=0 
@@ -11,7 +11,7 @@ DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2022.2\lib\win
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2022.2/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
-Command       create_platform done; 0.601 sec.
+Command       create_platform done; 0.5 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/common/xilinx.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/plb46.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/interface/axi4.gen 
@@ -26,7 +26,7 @@ Execute         source C:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/ip/xf
 Execute         source C:/Xilinx/Vitis_HLS/2022.2/common/technology/xilinx/DSP48/dsp48.gen 
 Execute       ap_part_info -name xck26-sfvc784-2LV-c -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 0.68 sec.
+Command     set_part done; 0.576 sec.
 Execute     add_files -cflags  -I c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls -I c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src  c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/v_tpg_config.h 
 INFO: [HLS 200-1510] Running: add_files -cflags  -I c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls -I c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src  c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/v_tpg_config.h 
 INFO: [HLS 200-10] Adding design file 'c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/v_tpg_config.h' to the project
@@ -104,7 +104,7 @@ INFO: [HLS 200-1510] Running: config_export -vendor xilinx.com -library ip -vers
 Execute     csynth_design 
 INFO: [HLS 200-1510] Running: csynth_design 
 Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.034 seconds; current allocated memory: 103.199 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 10.028 seconds; current allocated memory: 103.289 MB.
 INFO: [HLS 200-10] Analyzing design file 'c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/v_tpg.cpp' ... 
 INFO-FLOW: Compiling one TU...
 INFO-FLOW: Handling c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/v_tpg.cpp as C++
@@ -112,39 +112,39 @@ Execute         ap_part_info -name xck26-sfvc784-2LV-c -data info
 INFO-FLOW: Running: GCC PP 39
 INFO-FLOW: Source preprocessing
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp -foptimization-record-file=C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot C:/Xilinx/Vitis_HLS/2022.2/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -E -Ic:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls -Ic:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.2/common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 -device-name-info=xck26-sfvc784-2LV-c > C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp.clang.out.log 2> C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp.clang.err.log 
-Command         ap_eval done; 0.221 sec.
-INFO-FLOW: Done: GCC PP 39 time: 1.7 seconds per iteration
+Command         ap_eval done; 0.191 sec.
+INFO-FLOW: Done: GCC PP 39 time: 1.6 seconds per iteration
 Execute         set_directive_top v_tpg -name=v_tpg 
 Execute         source C:/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute         source C:/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
 INFO-FLOW: Source syntax check for synthesis
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.2/common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 -device-name-info=xck26-sfvc784-2LV-c > C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/clang.out.log 2> C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/clang.err.log 
-Command         ap_eval done; 2.489 sec.
+Command         ap_eval done; 2.205 sec.
 WARNING: [HLS 207-5531] extra token before variable expression is ignored (C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:383:33)
 Execute         clang_tidy xilinx-systemc-detector -desc systemc-detector C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/.systemc_flag -fix-errors C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command         clang_tidy done; 2.624 sec.
+Command         clang_tidy done; 2.286 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
 Execute         clang_tidy xilinx-directive2pragma -desc directive2pragma C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/all.directive.json 
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/all.directive.json -fix-errors C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command         clang_tidy done; 2.992 sec.
+Command         clang_tidy done; 2.617 sec.
 Execute         clang_tidy xilinx-remove-assert -desc remove-assert C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp std=gnu++14 -target fpga  
 INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command         clang_tidy done; 2.588 sec.
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 5.6 seconds per iteration
+Command         clang_tidy done; 2.27 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 4.9 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
 Execute         clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp std=gnu++14 -target fpga  
 Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp.clang-tidy.loop-label.out.log 2> C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp.clang-tidy.loop-label.err.log 
-Command           ap_eval done; 6.651 sec.
+Command           ap_eval done; 6.066 sec.
 Execute           source C:/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
-Command         clang_tidy done; 7.785 sec.
+Command         clang_tidy done; 7.067 sec.
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
-Command         ap_eval done; 2.418 sec.
+Command         ap_eval done; 2.113 sec.
 Execute         ap_part_info -name xck26-sfvc784-2LV-c -data info 
 INFO-FLOW: compiling source code to llvm bc
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp -Ic:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src/hls -Ic:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.bc {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.2/common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 -device-name-info=xck26-sfvc784-2LV-c > C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp.clang.out.log 2> C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp.clang.err.log 
-Command         ap_eval done; 2.605 sec.
+Command         ap_eval done; 2.309 sec.
 WARNING: [HLS 207-5292] unused parameter 'ovrlayId' (C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:268:21)
 WARNING: [HLS 207-5292] unused parameter 'maskId' (C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:268:35)
 WARNING: [HLS 207-5292] unused parameter 'crossHairX' (C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:268:82)
@@ -153,7 +153,7 @@ WARNING: [HLS 207-5292] unused parameter 'boxSize' (C:/Users/hhhh/rekonfigi/vide
 WARNING: [HLS 207-5292] unused parameter 'boxColorR' (C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:270:47)
 WARNING: [HLS 207-5292] unused parameter 'boxColorG' (C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:270:63)
 WARNING: [HLS 207-5292] unused parameter 'boxColorB' (C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:270:79)
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 25.98 seconds; current allocated memory: 124.062 MB.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 23.141 seconds; current allocated memory: 124.027 MB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
 Execute         run_link_or_opt -out C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.0.bc -args  "C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.g.bc"  
@@ -165,14 +165,14 @@ INFO-FLOW:
 INFO-FLOW: Linking math bc lib
 Execute         run_link_or_opt -out C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.2.m1.bc -args C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2022.2/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2022.2/win64/lib/libhlsmc++_39.bc 
 Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2022.2/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2022.2/win64/lib/libhlsmc++_39.bc -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.2.m1.bc > C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
-Command           ap_eval done; 2.259 sec.
+Command           ap_eval done; 1.974 sec.
 INFO-FLOW: 
-Command         run_link_or_opt done; 2.261 sec.
+Command         run_link_or_opt done; 1.975 sec.
 Execute         run_link_or_opt -opt -out C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.3.fpc.bc -args C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=v_tpg -reflow-float-conversion 
 Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=v_tpg -reflow-float-conversion -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.3.fpc.bc > C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
-Command           ap_eval done; 0.925 sec.
+Command           ap_eval done; 0.733 sec.
 INFO-FLOW: 
-Command         run_link_or_opt done; 0.926 sec.
+Command         run_link_or_opt done; 0.734 sec.
 Execute         run_link_or_opt -out C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.4.m2.bc -args C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2022.2/win64/lib/libfloatconversion_39.bc 
 Execute           ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2022.2/win64/lib/libfloatconversion_39.bc -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.4.m2.bc > C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
 INFO-FLOW: 
@@ -184,7 +184,7 @@ INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 Execute         is_m_axi_addr64 
 INFO-FLOW: Doing LTO.
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.2/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=v_tpg -mllvm -hls-db-dir -mllvm C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -hls-top-function-prefix=design_1_v_tpg_0_0_ -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-assume-no-address-wrap=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=4 -x ir C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.5.gdce.bc -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.lto.bc {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.2/common/technology\xilinx/common/platform.db} -hls-platform-name=zynquplus_medium -device-resource-info=BRAM_288.000000_DSP_1248.000000_FF_234240.000000_LUT_117120.000000_SLICE_14640.000000_URAM_64.000000 -device-name-info=xck26-sfvc784-2LV-c > C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.ld.0.bc.clang.err.log 
-Command         ap_eval done; 1.046 sec.
+Command         ap_eval done; 0.892 sec.
 INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<30>, 1ul, 1ul, 1ul>::get_user_ptr()' into 'hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_uint<30>, 1ul, 1ul, 1ul>&)' (C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_axi_sdata.h:237:50)
 INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<30>, 1ul, 1ul, 1ul>::get_dest_ptr()' into 'hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_uint<30>, 1ul, 1ul, 1ul>&)' (C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_axi_sdata.h:240:25)
 INFO: [HLS 214-131] Inlining function 'hls::axis<ap_uint<30>, 1ul, 1ul, 1ul>::get_id_ptr()' into 'hls::stream<hls::axis<ap_uint<30>, 1ul, 1ul, 1ul>, 0>::read(hls::axis<ap_uint<30>, 1ul, 1ul, 1ul>&)' (C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_axi_sdata.h:239:67)
@@ -519,22 +519,22 @@ INFO: [HLS 214-364] Automatically inlining function 'tpgPatternCrossHatch(unsign
 INFO: [HLS 214-270] Inferring pragma 'array_partition type=cyclic factor=5 dim=1' for array 'tpgSinTableArray_9bit' due to pipeline pragma (C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:523:9)
 INFO: [HLS 214-248] Applying array_partition to 'tpgSinTableArray_9bit': Cyclic partitioning with factor 5 on dimension 1. (c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/bd/design_1/ip/design_1_v_tpg_0_0/src\v_tpg_zoneplate.h:2106:0)
 INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 28.366 seconds; current allocated memory: 126.184 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 126.273 MB.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 29.089 seconds; current allocated memory: 126.168 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 126.332 MB.
 Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute           cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
 Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top v_tpg -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.0.bc -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.1.bc -f -phase std-opt 
-Command           transform done; 0.12 sec.
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.146 seconds; current allocated memory: 143.152 MB.
+Command           transform done; 0.107 sec.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 143.473 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute           transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.1.bc -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.2.prechk.bc -f 
-Command           transform done; 0.131 sec.
+Command           transform done; 0.121 sec.
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute           transform -syn-check C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.2.prechk.bc -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.189 seconds; current allocated memory: 157.180 MB.
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 157.324 MB.
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.g.1.bc to C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
@@ -543,7 +543,7 @@ INFO: [XFORM 203-712] Applying dataflow to function 'v_tpgHlsDataFlow' (C:/Users
 	 'AXIvideo2MultiPixStream'
 	 'tpgBackground'
 	 'MultiPixStream2AXIvideo'.
-Command           transform done; 0.398 sec.
+Command           transform done; 0.353 sec.
 INFO-FLOW: Presyn 2...
 Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.o.1.tmp.bc -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.o.2.bc -f -phase presyn 
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1228:39) to (C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1266:5) in function 'tpgBackground'... converting 3 basic blocks.
@@ -552,16 +552,16 @@ INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Users/hhhh
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1370:13) to (C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1384:6) in function 'tpgBackground'... converting 9 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1551:13) to (C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1565:6) in function 'tpgBackground'... converting 9 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:963:12) to (C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:993:8) in function 'MultiPixStream2AXIvideo'... converting 13 basic blocks.
-Command           transform done; 0.245 sec.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.645 seconds; current allocated memory: 195.004 MB.
+Command           transform done; 0.209 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.565 seconds; current allocated memory: 194.684 MB.
 INFO-FLOW: Building ssdm...
 Execute           transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.o.2.bc -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 WARNING: [HLS 200-1449] Process tpgBackground has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
-Command           transform done; 3.168 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 3.171 seconds; current allocated memory: 341.719 MB.
+Command           transform done; 2.511 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 2.514 seconds; current allocated memory: 341.418 MB.
 INFO-FLOW: Finish building internal data model.
-Command         opt_and_import_c done; 4.176 sec.
-Command       elaborate done; 58.547 sec.
+Command         opt_and_import_c done; 3.401 sec.
+Command       elaborate done; 55.651 sec.
 Execute       ap_eval exec zip -j C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
 Execute       autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
@@ -716,8 +716,8 @@ INFO: [SCHED 204-11] Start constructing STG ...
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'reg<unsigned short>'
 INFO: [SCHED 204-11] Finished constructing STG.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.424 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.64 seconds; current allocated memory: 346.062 MB.
+Command         schedule done; 0.36 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.539 seconds; current allocated memory: 345.832 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/reg_unsigned_short_s.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/reg_unsigned_short_s.sched.adb -f 
@@ -729,7 +729,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 347.160 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.061 seconds; current allocated memory: 346.934 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/reg_unsigned_short_s.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/reg_unsigned_short_s.bind.adb -f 
@@ -770,8 +770,8 @@ INFO: [SCHED 204-11] Start constructing STG ...
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'loop_wait_for_start'
 INFO: [SCHED 204-11] Finished constructing STG.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.45 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.492 seconds; current allocated memory: 347.680 MB.
+Command         schedule done; 0.37 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.408 seconds; current allocated memory: 347.488 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start.sched.adb -f 
@@ -783,7 +783,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.071 seconds; current allocated memory: 347.781 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 347.738 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start.bind.adb -f 
@@ -824,8 +824,8 @@ INFO: [SCHED 204-11] Start constructing STG ...
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'loop_width'
 INFO: [SCHED 204-11] Finished constructing STG.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.444 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.486 seconds; current allocated memory: 348.562 MB.
+Command         schedule done; 0.375 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.411 seconds; current allocated memory: 348.438 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_width.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_width.sched.adb -f 
@@ -837,7 +837,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.078 seconds; current allocated memory: 348.648 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.067 seconds; current allocated memory: 348.453 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_width.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_width.bind.adb -f 
@@ -878,8 +878,8 @@ INFO: [SCHED 204-11] Start constructing STG ...
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'loop_wait_for_eol'
 INFO: [SCHED 204-11] Finished constructing STG.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.454 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.516 seconds; current allocated memory: 348.879 MB.
+Command         schedule done; 0.926 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.973 seconds; current allocated memory: 348.488 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol.sched.adb -f 
@@ -891,7 +891,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.075 seconds; current allocated memory: 349.082 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.064 seconds; current allocated memory: 348.492 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol.bind.adb -f 
@@ -930,8 +930,8 @@ INFO: [SCHED 204-11] Finished scheduling optimization.
 INFO: [SCHED 204-11] Start constructing STG ...
 INFO: [SCHED 204-11] Finished constructing STG.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.448 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.495 seconds; current allocated memory: 349.645 MB.
+Command         schedule done; 0.382 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.419 seconds; current allocated memory: 349.527 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream.sched.adb -f 
@@ -943,7 +943,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.109 seconds; current allocated memory: 349.746 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.089 seconds; current allocated memory: 349.578 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream.bind.adb -f 
@@ -984,8 +984,8 @@ INFO: [SCHED 204-11] Start constructing STG ...
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'reg<ap_uint<10> >'
 INFO: [SCHED 204-11] Finished constructing STG.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.623 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.696 seconds; current allocated memory: 350.184 MB.
+Command         schedule done; 0.423 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.485 seconds; current allocated memory: 349.797 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/reg_ap_uint_10_s.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/reg_ap_uint_10_s.sched.adb -f 
@@ -997,7 +997,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.081 seconds; current allocated memory: 350.184 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.067 seconds; current allocated memory: 349.797 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/reg_ap_uint_10_s.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/reg_ap_uint_10_s.bind.adb -f 
@@ -1038,8 +1038,8 @@ INFO: [SCHED 204-11] Start constructing STG ...
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, function 'reg<int>'
 INFO: [SCHED 204-11] Finished constructing STG.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.493 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.54 seconds; current allocated memory: 350.203 MB.
+Command         schedule done; 0.782 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.822 seconds; current allocated memory: 350.059 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/reg_int_s.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/reg_int_s.sched.adb -f 
@@ -1051,7 +1051,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.079 seconds; current allocated memory: 350.203 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 350.059 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/reg_int_s.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/reg_int_s.bind.adb -f 
@@ -1175,13 +1175,13 @@ WARNING: [HLS 200-1016] The critical path in module 'tpgBackground_Pipeline_VITI
 
 INFO: [SCHED 204-11] Finished constructing STG.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 2.009 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.054 seconds; current allocated memory: 361.680 MB.
+Command         schedule done; 2.225 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.266 seconds; current allocated memory: 360.883 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/tpgBackground_Pipeline_VITIS_LOOP_520_2.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
-Command         syn_report done; 0.24 sec.
+Command         syn_report done; 0.21 sec.
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/tpgBackground_Pipeline_VITIS_LOOP_520_2.sched.adb -f 
-Command         db_write done; 0.109 sec.
+Command         db_write done; 0.101 sec.
 INFO-FLOW: Finish scheduling tpgBackground_Pipeline_VITIS_LOOP_520_2.
 Execute         set_default_model tpgBackground_Pipeline_VITIS_LOOP_520_2 
 Execute         bind -model tpgBackground_Pipeline_VITIS_LOOP_520_2 
@@ -1190,13 +1190,13 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 0.212 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.562 seconds; current allocated memory: 362.453 MB.
+Command         bind done; 0.176 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.487 seconds; current allocated memory: 361.918 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/tpgBackground_Pipeline_VITIS_LOOP_520_2.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
-Command         syn_report done; 0.405 sec.
+Command         syn_report done; 0.363 sec.
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/tpgBackground_Pipeline_VITIS_LOOP_520_2.bind.adb -f 
-Command         db_write done; 0.147 sec.
+Command         db_write done; 0.135 sec.
 INFO-FLOW: Finish binding tpgBackground_Pipeline_VITIS_LOOP_520_2.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'tpgBackground' 
@@ -1232,8 +1232,8 @@ INFO: [SCHED 204-11] Finished scheduling optimization.
 INFO: [SCHED 204-11] Start constructing STG ...
 INFO: [SCHED 204-11] Finished constructing STG.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.541 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.138 seconds; current allocated memory: 363.410 MB.
+Command         schedule done; 0.459 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.992 seconds; current allocated memory: 363.102 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/tpgBackground.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/tpgBackground.sched.adb -f 
@@ -1245,11 +1245,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 0.178 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.224 seconds; current allocated memory: 363.793 MB.
+Command         bind done; 0.172 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.217 seconds; current allocated memory: 363.215 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/tpgBackground.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
-Command         syn_report done; 0.342 sec.
+Command         syn_report done; 0.317 sec.
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/tpgBackground.bind.adb -f 
 INFO-FLOW: Finish binding tpgBackground.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1288,8 +1288,8 @@ INFO: [SCHED 204-11] Start constructing STG ...
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_936_2'
 INFO: [SCHED 204-11] Finished constructing STG.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.557 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.968 seconds; current allocated memory: 364.555 MB.
+Command         schedule done; 0.459 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 0.831 seconds; current allocated memory: 364.406 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2.sched.adb -f 
@@ -1301,7 +1301,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.104 seconds; current allocated memory: 364.555 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.084 seconds; current allocated memory: 364.672 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2.bind.adb -f 
@@ -1340,8 +1340,8 @@ INFO: [SCHED 204-11] Finished scheduling optimization.
 INFO: [SCHED 204-11] Start constructing STG ...
 INFO: [SCHED 204-11] Finished constructing STG.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.526 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.599 seconds; current allocated memory: 364.590 MB.
+Command         schedule done; 0.436 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.499 seconds; current allocated memory: 364.941 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/MultiPixStream2AXIvideo.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/MultiPixStream2AXIvideo.sched.adb -f 
@@ -1353,7 +1353,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.109 seconds; current allocated memory: 364.648 MB.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.085 seconds; current allocated memory: 364.953 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/MultiPixStream2AXIvideo.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/MultiPixStream2AXIvideo.bind.adb -f 
@@ -1392,8 +1392,8 @@ INFO: [SCHED 204-11] Finished scheduling optimization.
 INFO: [SCHED 204-11] Start constructing STG ...
 INFO: [SCHED 204-11] Finished constructing STG.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.508 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.585 seconds; current allocated memory: 365.008 MB.
+Command         schedule done; 0.439 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.507 seconds; current allocated memory: 365.145 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpgHlsDataFlow.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpgHlsDataFlow.sched.adb -f 
@@ -1405,11 +1405,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 0.201 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.219 seconds; current allocated memory: 365.496 MB.
+Command         bind done; 0.18 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.196 seconds; current allocated memory: 365.148 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpgHlsDataFlow.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
-Command         syn_report done; 0.367 sec.
+Command         syn_report done; 0.349 sec.
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpgHlsDataFlow.bind.adb -f 
 INFO-FLOW: Finish binding v_tpgHlsDataFlow.
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1446,8 +1446,8 @@ INFO: [SCHED 204-11] Finished scheduling optimization.
 INFO: [SCHED 204-11] Start constructing STG ...
 INFO: [SCHED 204-11] Finished constructing STG.
 INFO: [SCHED 204-11] Finished scheduling.
-Command         schedule done; 0.525 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.943 seconds; current allocated memory: 366.199 MB.
+Command         schedule done; 0.455 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.85 seconds; current allocated memory: 366.023 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.verbose.sched.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.sched.adb -f 
@@ -1459,11 +1459,11 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command         bind done; 0.207 sec.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.232 seconds; current allocated memory: 366.594 MB.
+Command         bind done; 0.193 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.213 seconds; current allocated memory: 366.551 MB.
 Execute         syn_report -verbosereport -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.verbose.bind.rpt 
 Execute           AP::get_flow_target_display_name
-Command         syn_report done; 0.395 sec.
+Command         syn_report done; 0.357 sec.
 Execute         db_write -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.bind.adb -f 
 INFO-FLOW: Finish binding v_tpg.
 Execute         get_model_list v_tpg -filter all-wo-channel 
@@ -1487,7 +1487,7 @@ INFO: [HLS 200-10] -- Generating RTL for module 'reg_unsigned_short_s'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute         create_rtl_model reg<unsigned short> -top_prefix design_1_v_tpg_0_0_ -sub_prefix design_1_v_tpg_0_0_ -mg_file C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/reg_unsigned_short_s.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'reg_unsigned_short_s'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.48 seconds; current allocated memory: 367.973 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.431 seconds; current allocated memory: 367.730 MB.
 Execute         source C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.rtl_wrap.cfg.tcl 
 Execute         gen_rtl reg<unsigned short> -style xilinx -f -lang vhdl -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/vhdl/design_1_v_tpg_0_0_reg_unsigned_short_s 
 Execute         gen_rtl reg<unsigned short> -style xilinx -f -lang vlog -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/verilog/design_1_v_tpg_0_0_reg_unsigned_short_s 
@@ -1504,7 +1504,7 @@ INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiPixStream_Pipelin
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute         create_rtl_model AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start -top_prefix design_1_v_tpg_0_0_ -sub_prefix design_1_v_tpg_0_0_ -mg_file C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.087 seconds; current allocated memory: 368.836 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.074 seconds; current allocated memory: 368.594 MB.
 Execute         source C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.rtl_wrap.cfg.tcl 
 Execute         gen_rtl AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start -style xilinx -f -lang vhdl -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/vhdl/design_1_v_tpg_0_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start 
 Execute         gen_rtl AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start -style xilinx -f -lang vlog -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/verilog/design_1_v_tpg_0_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start 
@@ -1522,7 +1522,7 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute         create_rtl_model AXIvideo2MultiPixStream_Pipeline_loop_width -top_prefix design_1_v_tpg_0_0_ -sub_prefix design_1_v_tpg_0_0_ -mg_file C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_width.compgen.tcl 
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'AXIvideo2MultiPixStream_Pipeline_loop_width' pipeline 'loop_width' pipeline type 'loop pipeline'
 INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream_Pipeline_loop_width'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.123 seconds; current allocated memory: 369.500 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 369.598 MB.
 Execute         source C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.rtl_wrap.cfg.tcl 
 Execute         gen_rtl AXIvideo2MultiPixStream_Pipeline_loop_width -style xilinx -f -lang vhdl -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/vhdl/design_1_v_tpg_0_0_AXIvideo2MultiPixStream_Pipeline_loop_width 
 Execute         gen_rtl AXIvideo2MultiPixStream_Pipeline_loop_width -style xilinx -f -lang vlog -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/verilog/design_1_v_tpg_0_0_AXIvideo2MultiPixStream_Pipeline_loop_width 
@@ -1539,7 +1539,7 @@ INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiPixStream_Pipelin
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute         create_rtl_model AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol -top_prefix design_1_v_tpg_0_0_ -sub_prefix design_1_v_tpg_0_0_ -mg_file C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.197 seconds; current allocated memory: 370.477 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.154 seconds; current allocated memory: 370.762 MB.
 Execute         source C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.rtl_wrap.cfg.tcl 
 Execute         gen_rtl AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol -style xilinx -f -lang vhdl -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/vhdl/design_1_v_tpg_0_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol 
 Execute         gen_rtl AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol -style xilinx -f -lang vlog -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/verilog/design_1_v_tpg_0_0_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol 
@@ -1556,7 +1556,7 @@ INFO: [HLS 200-10] -- Generating RTL for module 'AXIvideo2MultiPixStream'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute         create_rtl_model AXIvideo2MultiPixStream -top_prefix design_1_v_tpg_0_0_ -sub_prefix design_1_v_tpg_0_0_ -mg_file C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/AXIvideo2MultiPixStream.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'AXIvideo2MultiPixStream'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.099 seconds; current allocated memory: 371.512 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.091 seconds; current allocated memory: 371.375 MB.
 Execute         source C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.rtl_wrap.cfg.tcl 
 Execute         gen_rtl AXIvideo2MultiPixStream -style xilinx -f -lang vhdl -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/vhdl/design_1_v_tpg_0_0_AXIvideo2MultiPixStream 
 Execute         gen_rtl AXIvideo2MultiPixStream -style xilinx -f -lang vlog -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/verilog/design_1_v_tpg_0_0_AXIvideo2MultiPixStream 
@@ -1573,7 +1573,7 @@ INFO: [HLS 200-10] -- Generating RTL for module 'reg_ap_uint_10_s'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute         create_rtl_model reg<ap_uint<10> > -top_prefix design_1_v_tpg_0_0_ -sub_prefix design_1_v_tpg_0_0_ -mg_file C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/reg_ap_uint_10_s.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'reg_ap_uint_10_s'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.163 seconds; current allocated memory: 372.605 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.15 seconds; current allocated memory: 372.453 MB.
 Execute         source C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.rtl_wrap.cfg.tcl 
 Execute         gen_rtl reg<ap_uint<10> > -style xilinx -f -lang vhdl -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/vhdl/design_1_v_tpg_0_0_reg_ap_uint_10_s 
 Execute         gen_rtl reg<ap_uint<10> > -style xilinx -f -lang vlog -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/verilog/design_1_v_tpg_0_0_reg_ap_uint_10_s 
@@ -1590,7 +1590,7 @@ INFO: [HLS 200-10] -- Generating RTL for module 'reg_int_s'
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute         create_rtl_model reg<int> -top_prefix design_1_v_tpg_0_0_ -sub_prefix design_1_v_tpg_0_0_ -mg_file C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/reg_int_s.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'reg_int_s'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 372.895 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.078 seconds; current allocated memory: 372.621 MB.
 Execute         source C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.rtl_wrap.cfg.tcl 
 Execute         gen_rtl reg<int> -style xilinx -f -lang vhdl -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/vhdl/design_1_v_tpg_0_0_reg_int_s 
 Execute         gen_rtl reg<int> -style xilinx -f -lang vlog -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/verilog/design_1_v_tpg_0_0_reg_int_s 
@@ -1666,21 +1666,21 @@ INFO: [RTMG 210-279] Implementing memory 'design_1_v_tpg_0_0_tpgBackground_Pipel
 INFO: [RTMG 210-279] Implementing memory 'design_1_v_tpg_0_0_tpgBackground_Pipeline_VITIS_LOOP_520_2_DPtpgBarSelYuv_709_y_ROM_AUTO_1R' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'design_1_v_tpg_0_0_tpgBackground_Pipeline_VITIS_LOOP_520_2_DPtpgBarSelYuv_709_v_ROM_AUTO_1R' using auto ROMs.
 INFO: [RTMG 210-279] Implementing memory 'design_1_v_tpg_0_0_tpgBackground_Pipeline_VITIS_LOOP_520_2_DPtpgBarSelYuv_709_u_ROM_AUTO_1R' using auto ROMs.
-Command         create_rtl_model done; 1.382 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.457 seconds; current allocated memory: 387.422 MB.
+Command         create_rtl_model done; 1.484 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.543 seconds; current allocated memory: 387.062 MB.
 Execute         source C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.rtl_wrap.cfg.tcl 
 Execute         gen_rtl tpgBackground_Pipeline_VITIS_LOOP_520_2 -style xilinx -f -lang vhdl -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/vhdl/design_1_v_tpg_0_0_tpgBackground_Pipeline_VITIS_LOOP_520_2 
 Execute         gen_rtl tpgBackground_Pipeline_VITIS_LOOP_520_2 -style xilinx -f -lang vlog -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/verilog/design_1_v_tpg_0_0_tpgBackground_Pipeline_VITIS_LOOP_520_2 
 Execute         syn_report -csynth -model tpgBackground_Pipeline_VITIS_LOOP_520_2 -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/report/tpgBackground_Pipeline_VITIS_LOOP_520_2_csynth.rpt 
 Execute           AP::get_flow_target_display_name
-Command         syn_report done; 0.304 sec.
+Command         syn_report done; 0.277 sec.
 Execute         syn_report -rtlxml -model tpgBackground_Pipeline_VITIS_LOOP_520_2 -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/report/tpgBackground_Pipeline_VITIS_LOOP_520_2_csynth.xml 
-Command         syn_report done; 0.144 sec.
+Command         syn_report done; 0.134 sec.
 Execute         syn_report -verbosereport -model tpgBackground_Pipeline_VITIS_LOOP_520_2 -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/tpgBackground_Pipeline_VITIS_LOOP_520_2.verbose.rpt 
 Execute           AP::get_flow_target_display_name
-Command         syn_report done; 0.556 sec.
+Command         syn_report done; 0.505 sec.
 Execute         db_write -model tpgBackground_Pipeline_VITIS_LOOP_520_2 -f -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/tpgBackground_Pipeline_VITIS_LOOP_520_2.adb 
-Command         db_write done; 0.298 sec.
+Command         db_write done; 0.275 sec.
 Execute         db_write -model tpgBackground_Pipeline_VITIS_LOOP_520_2 -bindview -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/design.bindinfo.xml 
 Execute         gen_tb_info tpgBackground_Pipeline_VITIS_LOOP_520_2 -p C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/tpgBackground_Pipeline_VITIS_LOOP_520_2 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -1701,8 +1701,8 @@ WARNING: [RTGEN 206-101] Register 'rampVal_2' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'vBarSel_1' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'hBarSel_1' is power-on initialization.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'tpgBackground'.
-Command         create_rtl_model done; 0.277 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 2.425 seconds; current allocated memory: 400.273 MB.
+Command         create_rtl_model done; 0.232 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 2.2 seconds; current allocated memory: 399.445 MB.
 Execute         source C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.rtl_wrap.cfg.tcl 
 Execute         gen_rtl tpgBackground -style xilinx -f -lang vhdl -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/vhdl/design_1_v_tpg_0_0_tpgBackground 
 Execute         gen_rtl tpgBackground -style xilinx -f -lang vlog -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/verilog/design_1_v_tpg_0_0_tpgBackground 
@@ -1711,7 +1711,7 @@ Execute           AP::get_flow_target_display_name
 Execute         syn_report -rtlxml -model tpgBackground -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/report/tpgBackground_csynth.xml 
 Execute         syn_report -verbosereport -model tpgBackground -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/tpgBackground.verbose.rpt 
 Execute           AP::get_flow_target_display_name
-Command         syn_report done; 0.386 sec.
+Command         syn_report done; 0.345 sec.
 Execute         db_write -model tpgBackground -f -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/tpgBackground.adb 
 Execute         db_write -model tpgBackground -bindview -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/design.bindinfo.xml 
 Execute         gen_tb_info tpgBackground -p C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/tpgBackground 
@@ -1720,7 +1720,7 @@ INFO: [HLS 200-10] -- Generating RTL for module 'MultiPixStream2AXIvideo_Pipelin
 INFO: [HLS 200-10] ----------------------------------------------------------------
 Execute         create_rtl_model MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2 -top_prefix design_1_v_tpg_0_0_ -sub_prefix design_1_v_tpg_0_0_ -mg_file C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2.compgen.tcl 
 INFO: [RTGEN 206-100] Finished creating RTL model for 'MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.711 seconds; current allocated memory: 402.785 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.64 seconds; current allocated memory: 402.480 MB.
 Execute         source C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.rtl_wrap.cfg.tcl 
 Execute         gen_rtl MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2 -style xilinx -f -lang vhdl -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/vhdl/design_1_v_tpg_0_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2 
 Execute         gen_rtl MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2 -style xilinx -f -lang vlog -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/verilog/design_1_v_tpg_0_0_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2 
@@ -1739,7 +1739,7 @@ Execute         create_rtl_model MultiPixStream2AXIvideo -top_prefix design_1_v_
 WARNING: [RTGEN 206-101] Register 'fidStored' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 'counter' is power-on initialization.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'MultiPixStream2AXIvideo'.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.282 seconds; current allocated memory: 403.898 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.231 seconds; current allocated memory: 404.582 MB.
 Execute         source C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.rtl_wrap.cfg.tcl 
 Execute         gen_rtl MultiPixStream2AXIvideo -style xilinx -f -lang vhdl -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/vhdl/design_1_v_tpg_0_0_MultiPixStream2AXIvideo 
 Execute         gen_rtl MultiPixStream2AXIvideo -style xilinx -f -lang vlog -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/verilog/design_1_v_tpg_0_0_MultiPixStream2AXIvideo 
@@ -1759,7 +1759,7 @@ INFO: [RTGEN 206-100] Finished creating RTL model for 'v_tpgHlsDataFlow'.
 INFO: [RTMG 210-285] Implementing FIFO 'srcYUV_U(design_1_v_tpg_0_0_fifo_w30_d21_S)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'ovrlayYUV_U(design_1_v_tpg_0_0_fifo_w30_d16_S)' using Shift Registers.
 INFO: [RTMG 210-285] Implementing FIFO 'start_for_MultiPixStream2AXIvideo_U0_U(design_1_v_tpg_0_0_start_for_MultiPixStream2AXIvideo_U0)' using Shift Registers.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.249 seconds; current allocated memory: 405.070 MB.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.204 seconds; current allocated memory: 405.426 MB.
 Execute         source C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.rtl_wrap.cfg.tcl 
 Execute         gen_rtl v_tpgHlsDataFlow -style xilinx -f -lang vhdl -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/vhdl/design_1_v_tpg_0_0_v_tpgHlsDataFlow 
 Execute         gen_rtl v_tpgHlsDataFlow -style xilinx -f -lang vlog -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/verilog/design_1_v_tpg_0_0_v_tpgHlsDataFlow 
@@ -1768,7 +1768,7 @@ Execute           AP::get_flow_target_display_name
 Execute         syn_report -rtlxml -model v_tpgHlsDataFlow -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/report/v_tpgHlsDataFlow_csynth.xml 
 Execute         syn_report -verbosereport -model v_tpgHlsDataFlow -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpgHlsDataFlow.verbose.rpt 
 Execute           AP::get_flow_target_display_name
-Command         syn_report done; 0.39 sec.
+Command         syn_report done; 0.349 sec.
 Execute         db_write -model v_tpgHlsDataFlow -f -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpgHlsDataFlow.adb 
 Execute         db_write -model v_tpgHlsDataFlow -bindview -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/design.bindinfo.xml 
 Execute         gen_tb_info v_tpgHlsDataFlow -p C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpgHlsDataFlow 
@@ -1825,8 +1825,8 @@ WARNING: [RTGEN 206-101] Register 'count' is power-on initialization.
 WARNING: [RTGEN 206-101] Register 's' is power-on initialization.
 INFO: [RTGEN 206-100] Bundling port 'height', 'width', 'bckgndId', 'ovrlayId', 'maskId', 'motionSpeed', 'colorFormat', 'crossHairX', 'crossHairY', 'ZplateHorContStart', 'ZplateHorContDelta', 'ZplateVerContStart', 'ZplateVerContDelta', 'boxSize', 'boxColorR', 'boxColorG', 'boxColorB', 'enableInput', 'passthruStartX', 'passthruStartY', 'passthruEndX', 'passthruEndY', 'dpDynamicRange', 'dpYUVCoef', 'field_id', 'bck_motion_en' to AXI-Lite port CTRL.
 INFO: [RTGEN 206-100] Finished creating RTL model for 'v_tpg'.
-Command         create_rtl_model done; 0.967 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.466 seconds; current allocated memory: 407.012 MB.
+Command         create_rtl_model done; 0.801 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.246 seconds; current allocated memory: 407.293 MB.
 Execute         source C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.rtl_wrap.cfg.tcl 
 Execute         gen_rtl v_tpg -istop -style xilinx -f -lang vhdl -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/vhdl/design_1_v_tpg_0_0_v_tpg 
 Execute         gen_rtl v_tpg -istop -style xilinx -f -lang vlog -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/verilog/design_1_v_tpg_0_0_v_tpg 
@@ -1835,13 +1835,13 @@ Execute           AP::get_flow_target_display_name
 Execute         syn_report -rtlxml -model v_tpg -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/report/v_tpg_csynth.xml 
 Execute         syn_report -verbosereport -model v_tpg -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.verbose.rpt 
 Execute           AP::get_flow_target_display_name
-Command         syn_report done; 0.399 sec.
+Command         syn_report done; 0.362 sec.
 Execute         db_write -model v_tpg -f -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.adb 
 Execute         db_write -model v_tpg -bindview -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/design.bindinfo.xml 
 Execute         gen_tb_info v_tpg -p C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg 
 Execute         export_constraint_db -f -tool general -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.constraint.tcl 
 Execute         syn_report -designview -model v_tpg -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.design.xml 
-Command         syn_report done; 0.424 sec.
+Command         syn_report done; 0.391 sec.
 Execute         syn_report -csynthDesign -model v_tpg -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/syn/report/csynth.rpt 
 Execute           AP::get_flow_target_display_name
 Execute         syn_report -wcfg -model v_tpg -o C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg_dataflow_ana.wcfg 
@@ -2260,15 +2260,15 @@ Execute           ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet
 Execute           ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
 Execute           ap_part_info -name xck26-sfvc784-2LV-c -data names -quiet 
 Execute           ap_part_info -name xck26-sfvc784-2LV-c -data info -quiet 
-Command         ap_source done; 0.349 sec.
+Command         ap_source done; 0.296 sec.
 Execute         source C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/tpgBackground.compgen.tcl 
 Execute         source C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2.compgen.tcl 
 Execute         source C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/MultiPixStream2AXIvideo.compgen.tcl 
 Execute         source C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpgHlsDataFlow.compgen.tcl 
 Execute         source C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.compgen.tcl 
 Execute           source ./design_1_v_tpg_0_0_CTRL.slave.tcl 
-Command         ap_source done; 0.219 sec.
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 2.388 seconds; current allocated memory: 411.074 MB.
+Command         ap_source done; 0.181 sec.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 2.285 seconds; current allocated memory: 410.496 MB.
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='design_1_v_tpg_0_0_' outfile=''
 INFO-FLOW: Running: create_csynth_xml read xml data
 INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
@@ -2395,17 +2395,17 @@ Execute         source C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_pass
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME CTRL_s_axi_U SOURCE {} VARIABLE {} MODULE v_tpg LOOP {} BUNDLEDNAME CTRL DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST v_tpg MODULE2INSTS {v_tpg v_tpg reg_unsigned_short_s {grp_reg_unsigned_short_s_fu_537 grp_reg_unsigned_short_s_fu_253 grp_reg_unsigned_short_s_fu_259} v_tpgHlsDataFlow grp_v_tpgHlsDataFlow_fu_339 AXIvideo2MultiPixStream AXIvideo2MultiPixStream_U0 AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start_fu_179 AXIvideo2MultiPixStream_Pipeline_loop_width grp_AXIvideo2MultiPixStream_Pipeline_loop_width_fu_199 AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol_fu_227 tpgBackground tpgBackground_U0 tpgBackground_Pipeline_VITIS_LOOP_520_2 grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_504 reg_ap_uint_10_s grp_reg_ap_uint_10_s_fu_2159 reg_int_s grp_reg_int_s_fu_2649 MultiPixStream2AXIvideo MultiPixStream2AXIvideo_U0 MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2 grp_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2_fu_143} INST2MODULE {v_tpg v_tpg grp_reg_unsigned_short_s_fu_537 reg_unsigned_short_s grp_v_tpgHlsDataFlow_fu_339 v_tpgHlsDataFlow AXIvideo2MultiPixStream_U0 AXIvideo2MultiPixStream grp_reg_unsigned_short_s_fu_253 reg_unsigned_short_s grp_reg_unsigned_short_s_fu_259 reg_unsigned_short_s grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start_fu_179 AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start grp_AXIvideo2MultiPixStream_Pipeline_loop_width_fu_199 AXIvideo2MultiPixStream_Pipeline_loop_width grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol_fu_227 AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol tpgBackground_U0 tpgBackground grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_504 tpgBackground_Pipeline_VITIS_LOOP_520_2 grp_reg_ap_uint_10_s_fu_2159 reg_ap_uint_10_s grp_reg_int_s_fu_2649 reg_int_s MultiPixStream2AXIvideo_U0 MultiPixStream2AXIvideo grp_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2_fu_143 MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2} INSTDATA {v_tpg {DEPTH 1 CHILDREN {grp_reg_unsigned_short_s_fu_537 grp_v_tpgHlsDataFlow_fu_339}} grp_reg_unsigned_short_s_fu_537 {DEPTH 2 CHILDREN {}} grp_v_tpgHlsDataFlow_fu_339 {DEPTH 2 CHILDREN {AXIvideo2MultiPixStream_U0 tpgBackground_U0 MultiPixStream2AXIvideo_U0}} AXIvideo2MultiPixStream_U0 {DEPTH 3 CHILDREN {grp_reg_unsigned_short_s_fu_253 grp_reg_unsigned_short_s_fu_259 grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start_fu_179 grp_AXIvideo2MultiPixStream_Pipeline_loop_width_fu_199 grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol_fu_227}} grp_reg_unsigned_short_s_fu_253 {DEPTH 4 CHILDREN {}} grp_reg_unsigned_short_s_fu_259 {DEPTH 4 CHILDREN {}} grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start_fu_179 {DEPTH 4 CHILDREN {}} grp_AXIvideo2MultiPixStream_Pipeline_loop_width_fu_199 {DEPTH 4 CHILDREN {}} grp_AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol_fu_227 {DEPTH 4 CHILDREN {}} tpgBackground_U0 {DEPTH 3 CHILDREN grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_504} grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_504 {DEPTH 4 CHILDREN {grp_reg_ap_uint_10_s_fu_2159 grp_reg_int_s_fu_2649}} grp_reg_ap_uint_10_s_fu_2159 {DEPTH 5 CHILDREN {}} grp_reg_int_s_fu_2649 {DEPTH 5 CHILDREN {}} MultiPixStream2AXIvideo_U0 {DEPTH 3 CHILDREN grp_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2_fu_143} grp_MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2_fu_143 {DEPTH 4 CHILDREN {}}} MODULEDATA {AXIvideo2MultiPixStream_Pipeline_loop_width {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME j_4_fu_223_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:805 VARIABLE j_4 LOOP loop_width BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} AXIvideo2MultiPixStream {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME i_4_fu_315_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:800 VARIABLE i_4 LOOP loop_height BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} tpgBackground_Pipeline_VITIS_LOOP_520_2 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln520_fu_2087_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:520 VARIABLE add_ln520 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln525_fu_2705_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:525 VARIABLE add_ln525 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln840_2_fu_2329_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:840} VARIABLE add_ln840_2 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln841_fu_3192_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:841} VARIABLE add_ln841 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1730_fu_3208_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1730 VARIABLE add_ln1730 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln840_6_fu_3230_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:840} VARIABLE add_ln840_6 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME rampVal_2_new_1_out SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1664 VARIABLE add_ln1664 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1530_fu_3256_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1530 VARIABLE add_ln1530 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln840_1_fu_2365_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:840} VARIABLE add_ln840_1 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln841_1_fu_2386_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:841} VARIABLE sub_ln841_1 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1548_fu_3288_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1548 VARIABLE add_ln1548 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln840_5_fu_2397_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:840} VARIABLE add_ln840_5 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1500_fu_4337_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1500 VARIABLE add_ln1500 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_11ns_12ns_23_4_1_U61 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1236 VARIABLE mul_ln1236 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1236_fu_2832_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1236 VARIABLE add_ln1236 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1236_1_fu_2944_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1236 VARIABLE add_ln1236_1 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_2153_p0 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1240 VARIABLE add_ln1240 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_11ns_12ns_23_4_1_U62 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1240 VARIABLE mul_ln1240 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1240_1_fu_2898_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1240 VARIABLE add_ln1240_1 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1240_2_fu_2970_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1240 VARIABLE add_ln1240_2 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_2414_p0 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1244 VARIABLE add_ln1244 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_11ns_12ns_23_4_1_U63 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1244 VARIABLE mul_ln1244 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1244_1_fu_3034_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1244 VARIABLE add_ln1244_1 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1244_2_fu_3104_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1244 VARIABLE add_ln1244_2 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_16ns_7ns_15ns_23_4_1_U64 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1257 VARIABLE mul_ln1257 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_16ns_8ns_23ns_24_4_1_U67 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1257 VARIABLE mul_ln1257_1 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_16ns_5ns_21_4_1_U71 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1257 VARIABLE mul_ln1257_2 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_16ns_7ns_15ns_23_4_1_U64 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1257 VARIABLE add_ln1257 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_16ns_8ns_23ns_24_4_1_U67 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1257 VARIABLE add_ln1257_1 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1257_2_fu_4382_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1257 VARIABLE add_ln1257_2 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1257_3_fu_4388_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1257 VARIABLE add_ln1257_3 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_16ns_7s_18ns_23_4_1_U65 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1258 VARIABLE mul_ln1258 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_16ns_8s_23s_24_4_1_U68 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1258 VARIABLE mul_ln1258_1 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_16ns_7s_18ns_23_4_1_U65 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1258 VARIABLE add_ln1258 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_16ns_8s_23s_24_4_1_U68 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1258 VARIABLE add_ln1258_1 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1258_2_fu_3708_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1258 VARIABLE add_ln1258_2 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_16ns_8s_24_4_1_U66 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1259 VARIABLE mul_ln1259 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_16ns_6s_24s_24_4_1_U69 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1259 VARIABLE mul_ln1259_1 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1259_fu_3735_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1259 VARIABLE add_ln1259 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_16ns_6s_24s_24_4_1_U69 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1259 VARIABLE add_ln1259_1 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1259_2_fu_3748_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1259 VARIABLE add_ln1259_2 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln840_3_fu_2438_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:840} VARIABLE add_ln840_3 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln841_2_fu_2490_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:841} VARIABLE sub_ln841_2 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln840_7_fu_2508_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:840} VARIABLE add_ln840_7 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1348_fu_3327_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1348 VARIABLE add_ln1348 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln840_fu_2544_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:840} VARIABLE add_ln840 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln841_fu_2565_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:841} VARIABLE sub_ln841 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1367_fu_3363_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1367 VARIABLE add_ln1367 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln840_4_fu_2576_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:840} VARIABLE add_ln840_4 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1296_fu_2668_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1296 VARIABLE add_ln1296 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1298_fu_2680_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1298 VARIABLE add_ln1298 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME am_addmul_16ns_1s_16ns_17_4_1_U59 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1302 VARIABLE add_ln1302 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME am_addmul_16ns_1s_16ns_17_4_1_U59 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1302 VARIABLE mul_ln1302 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_16s_16s_16ns_16_4_1_U60 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1302 VARIABLE mul_ln1302_1 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME grp_fu_4800_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1306 VARIABLE add_ln1306_1 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_16s_16s_16ns_16_4_1_U60 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1306 VARIABLE add_ln1306 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_20s_8ns_28_4_1_U70 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1311 VARIABLE mul_ln1311 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln1311_fu_3819_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1311 VARIABLE sub_ln1311 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln1311_1_fu_4553_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1311 VARIABLE sub_ln1311_1 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME outpix_val_V_56_fu_4575_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1314 VARIABLE outpix_val_V_56 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME ret_V_fu_2596_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:1495} VARIABLE ret_V LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln186_fu_2607_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:186} VARIABLE add_ln186 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln186_fu_2613_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.2/common/technology/autopilot\ap_int_base.h:186} VARIABLE sub_ln186 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1212_fu_3522_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1212 VARIABLE add_ln1212 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1056_fu_3882_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1056 VARIABLE add_ln1056 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1039_fu_4675_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1039 VARIABLE add_ln1039 LOOP VITIS_LOOP_520_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME redYuv_U SOURCE {} VARIABLE redYuv LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME grnYuv_U SOURCE {} VARIABLE grnYuv LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME bluYuv_U SOURCE {} VARIABLE bluYuv LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME blkYuv_U SOURCE {} VARIABLE blkYuv LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME whiYuv_U SOURCE {} VARIABLE whiYuv LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME tpgBarSelRgb_r_U SOURCE {} VARIABLE tpgBarSelRgb_r LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME tpgBarSelYuv_y_U SOURCE {} VARIABLE tpgBarSelYuv_y LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME tpgBarSelRgb_g_U SOURCE {} VARIABLE tpgBarSelRgb_g LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME tpgBarSelYuv_u_U SOURCE {} VARIABLE tpgBarSelYuv_u LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME tpgBarSelYuv_v_U SOURCE {} VARIABLE tpgBarSelYuv_v LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME tpgBarSelRgb_b_U SOURCE {} VARIABLE tpgBarSelRgb_b LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME tpgSinTableArray_U SOURCE {} VARIABLE tpgSinTableArray LOOP {} BUNDLEDNAME {} DSP 0 BRAM 3 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME tpgTartanBarArray_U SOURCE {} VARIABLE tpgTartanBarArray LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME whiYuv_1_U SOURCE {} VARIABLE whiYuv_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME blkYuv_1_U SOURCE {} VARIABLE blkYuv_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_np PRAGMA {} RTLNAME tpgSinTableArray_9bit_0_U SOURCE {} VARIABLE tpgSinTableArray_9bit_0 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage rom_np}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_np PRAGMA {} RTLNAME tpgSinTableArray_9bit_1_U SOURCE {} VARIABLE tpgSinTableArray_9bit_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage rom_np}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_np PRAGMA {} RTLNAME tpgSinTableArray_9bit_2_U SOURCE {} VARIABLE tpgSinTableArray_9bit_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage rom_np}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_np PRAGMA {} RTLNAME tpgSinTableArray_9bit_3_U SOURCE {} VARIABLE tpgSinTableArray_9bit_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage rom_np}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_np PRAGMA {} RTLNAME tpgSinTableArray_9bit_4_U SOURCE {} VARIABLE tpgSinTableArray_9bit_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage rom_np}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME tpgCheckerBoardArray_U SOURCE {} VARIABLE tpgCheckerBoardArray LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME DPtpgBarSelRgb_VESA_r_U SOURCE {} VARIABLE DPtpgBarSelRgb_VESA_r LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME DPtpgBarSelRgb_VESA_g_U SOURCE {} VARIABLE DPtpgBarSelRgb_VESA_g LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME DPtpgBarSelRgb_VESA_b_U SOURCE {} VARIABLE DPtpgBarSelRgb_VESA_b LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME DPtpgBarArray_U SOURCE {} VARIABLE DPtpgBarArray LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME DPtpgBarSelRgb_CEA_r_U SOURCE {} VARIABLE DPtpgBarSelRgb_CEA_r LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME DPtpgBarSelRgb_CEA_g_U SOURCE {} VARIABLE DPtpgBarSelRgb_CEA_g LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME DPtpgBarSelRgb_CEA_b_U SOURCE {} VARIABLE DPtpgBarSelRgb_CEA_b LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME DPtpgBarSelYuv_601_y_U SOURCE {} VARIABLE DPtpgBarSelYuv_601_y LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME DPtpgBarSelYuv_601_v_U SOURCE {} VARIABLE DPtpgBarSelYuv_601_v LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME DPtpgBarSelYuv_601_u_U SOURCE {} VARIABLE DPtpgBarSelYuv_601_u LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME DPtpgBarSelYuv_709_y_U SOURCE {} VARIABLE DPtpgBarSelYuv_709_y LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME DPtpgBarSelYuv_709_v_U SOURCE {} VARIABLE DPtpgBarSelYuv_709_v LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE rom_1p PRAGMA {} RTLNAME DPtpgBarSelYuv_709_u_U SOURCE {} VARIABLE DPtpgBarSelYuv_709_u LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage rom_1p}}} AREA {DSP 13 BRAM 13 URAM 0}} tpgBackground {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add2_i_fu_790_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:506 VARIABLE add2_i LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME barWidthMinSamples_fu_806_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:506 VARIABLE barWidthMinSamples LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add5_i_fu_820_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:505 VARIABLE add5_i LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_i_fu_842_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:506 VARIABLE add_i LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME sub_i_i_i_fu_872_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:505 VARIABLE sub_i_i_i LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME sub40_i_fu_878_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:506 VARIABLE sub40_i LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1404_fu_884_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1404 VARIABLE add_ln1404 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln518_fu_1083_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:518 VARIABLE add_ln518 LOOP VITIS_LOOP_518_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1488_fu_1217_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:1488 VARIABLE add_ln1488 LOOP VITIS_LOOP_518_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln705_fu_1126_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:705 VARIABLE add_ln705 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 13 BRAM 13 URAM 0}} MultiPixStream2AXIvideo_Pipeline_VITIS_LOOP_936_2 {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME j_2_fu_274_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:936 VARIABLE j_2 LOOP VITIS_LOOP_936_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME counter SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:960 VARIABLE add_ln960 LOOP VITIS_LOOP_936_2 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} MultiPixStream2AXIvideo {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME sub_fu_196_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:883 VARIABLE sub LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME i_2_fu_246_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:934 VARIABLE i_2 LOOP VITIS_LOOP_934_1 BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} v_tpgHlsDataFlow {BINDINFO {{BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME srcYUV_U SOURCE {} VARIABLE srcYUV LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}} {BINDTYPE storage ID {} IMPL srl LATENCY 0 OPTYPE fifo PRAGMA {} RTLNAME ovrlayYUV_U SOURCE {} VARIABLE ovrlayYUV LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_storage fifo}}} AREA {DSP 13 BRAM 13 URAM 0}} v_tpg {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln457_fu_553_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:457 VARIABLE add_ln457 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln462_fu_585_p2 SOURCE C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:462 VARIABLE add_ln462 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 13 BRAM 13 URAM 0}} reg_unsigned_short_s {AREA {DSP 0 BRAM 0 URAM 0}} AXIvideo2MultiPixStream_Pipeline_loop_wait_for_start {AREA {DSP 0 BRAM 0 URAM 0}} AXIvideo2MultiPixStream_Pipeline_loop_wait_for_eol {AREA {DSP 0 BRAM 0 URAM 0}} reg_ap_uint_10_s {AREA {DSP 0 BRAM 0 URAM 0}} reg_int_s {AREA {DSP 0 BRAM 0 URAM 0}}}}'
 INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
 INFO-FLOW: Running: gen_csynth_sec_pragma
-INFO-FLOW: Done: gen_csynth_sec_pragma time: 0.5 seconds per iteration
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0.4 seconds per iteration
 INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
 INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 3.044 seconds; current allocated memory: 419.051 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 2.579 seconds; current allocated memory: 419.168 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for v_tpg with prefix design_1_v_tpg_0_0_.
 INFO: [VLOG 209-307] Generating Verilog RTL for v_tpg with prefix design_1_v_tpg_0_0_.
 Execute         syn_report -model v_tpg -printsummary 
 INFO: [HLS 200-789] **** Estimated Fmax: 294.81 MHz
-Command       autosyn done; 26.386 sec.
-Command     csynth_design done; 85.029 sec.
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 25 seconds. CPU system time: 3 seconds. Elapsed time: 85.029 seconds; current allocated memory: 318.656 MB.
+Command       autosyn done; 24.28 sec.
+Command     csynth_design done; 80.012 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 21 seconds. CPU system time: 3 seconds. Elapsed time: 80.012 seconds; current allocated memory: 318.492 MB.
 Execute     export_design -format ip_catalog 
 INFO: [HLS 200-1510] Running: export_design -format ip_catalog 
 Execute       config_export -format=ip_catalog 
@@ -2636,6 +2636,6 @@ INFO-FLOW: DBG:PUTS:     IP package: exec C:/Users/hhhh/rekonfigi/video_passthro
 INFO-FLOW: DBG:PUTS:     IP package: success C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/impl/ip/pack.bat
 Execute       send_msg_by_id INFO @200-802@%s prj/sol/impl/export.zip 
 INFO: [HLS 200-802] Generated output file prj/sol/impl/export.zip
-Command     export_design done; 12.955 sec.
-INFO: [HLS 200-111] Finished Command export_design CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 12.955 seconds; current allocated memory: 6.062 MB.
+Command     export_design done; 10.934 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 10.934 seconds; current allocated memory: 6.168 MB.
 Execute     cleanup_all 

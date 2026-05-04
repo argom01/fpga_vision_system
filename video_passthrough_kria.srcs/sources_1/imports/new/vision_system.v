@@ -143,6 +143,21 @@ module vision_system(
     assign hsync_mux[4] = hsync_mux[3];
     assign vsync_mux[4] = vsync_mux[3];
     
+    //hsv_out
+    
+    rgb2hsv_0 rgb2hsv (
+        .clk(clk),
+        .de_in(de_in),
+        .hsync_in(hsync_in),
+        .vsync_in(vsync_in),
+        .de_out(de_mux[5]),
+        .hsync_out(hsync_mux[5]),
+        .vsync_out(vsync_mux[5]),
+        
+        .pixel_in(pixel_in),
+        .pixel_out(rgb_mux[5])
+        );
+    
     //output
     
     assign pixel_out = rgb_mux[sw];

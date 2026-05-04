@@ -98,7 +98,15 @@ read_verilog -library xil_defaultlib {
   C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.srcs/sources_1/imports/new/vision_system.v
   C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v
 }
-read_ip -quiet C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.srcs/sources_1/ip/rgb2ycbcr_0/rgb2ycbcr_0.xci
+read_ip -quiet C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.srcs/sources_1/ip/rgb2ycbcr_1/rgb2ycbcr_1.xci
+
+read_ip -quiet C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.srcs/sources_1/ip/rgb2hsv_0/rgb2hsv_0.xci
+
+read_ip -quiet C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.srcs/sources_1/ip/lut_binary/lut_binary.xci
+set_property used_in_implementation false [get_files -all c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/ip/lut_binary/lut_binary_ooc.xdc]
+
+read_ip -quiet C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.srcs/sources_1/ip/lut/lut.xci
+set_property used_in_implementation false [get_files -all c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/ip/lut/lut_ooc.xdc]
 
 add_files C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.srcs/sources_1/bd/design_1/design_1.bd
 set_property used_in_implementation false [get_files -all c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc]

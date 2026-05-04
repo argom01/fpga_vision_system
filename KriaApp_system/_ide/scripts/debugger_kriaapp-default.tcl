@@ -14,7 +14,7 @@ source C:/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
 targets -set -nocase -filter {name =~"APU*"}
 rst -system
 after 3000
-targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL1Y1ZEL1VSA" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL1Y1ZEL1VSA-04724093-0"}
+targets -set -filter {jtag_cable_name =~ "Xilinx X-MLCC-01 XFL1CCI1YH34A" && level==0 && jtag_device_ctx=="jsn-X-MLCC-01-XFL1CCI1YH34A-04724093-0"}
 fpga -file C:/Users/hhhh/rekonfigi/video_passthrough_kria/KriaApp/_ide/bitstream/design_1_wrapper.bit
 targets -set -nocase -filter {name =~"APU*"}
 loadhw -hw C:/Users/hhhh/rekonfigi/video_passthrough_kria/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
@@ -24,9 +24,9 @@ set mode [expr [mrd -value 0xFF5E0200] & 0xf]
 targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor
 dow C:/Users/hhhh/rekonfigi/video_passthrough_kria/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/boot/fsbl.elf
-set bp_12_47_fsbl_bp [bpadd -addr &XFsbl_Exit]
+set bp_20_37_fsbl_bp [bpadd -addr &XFsbl_Exit]
 con -block -timeout 60
-bpremove $bp_12_47_fsbl_bp
+bpremove $bp_20_37_fsbl_bp
 targets -set -nocase -filter {name =~ "*A53*#0"}
 rst -processor
 dow C:/Users/hhhh/rekonfigi/video_passthrough_kria/KriaApp/Debug/KriaApp.elf

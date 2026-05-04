@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-//Date        : Mon Apr 27 09:54:01 2026
+//Date        : Mon May  4 01:49:43 2026
 //Host        : DESKTOP-I43IRA7 running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -16,7 +16,8 @@ module design_1_wrapper
     mipi_phy_if_0_clk_p,
     mipi_phy_if_0_data_n,
     mipi_phy_if_0_data_p,
-    rpi_enable);
+    rpi_enable,
+    sw);
   inout IIC_1_0_scl_io;
   inout IIC_1_0_sda_io;
   input mipi_phy_if_0_clk_n;
@@ -24,6 +25,7 @@ module design_1_wrapper
   input [1:0]mipi_phy_if_0_data_n;
   input [1:0]mipi_phy_if_0_data_p;
   output [0:0]rpi_enable;
+  input [3:0]sw;
 
   wire IIC_1_0_scl_i;
   wire IIC_1_0_scl_io;
@@ -38,6 +40,7 @@ module design_1_wrapper
   wire [1:0]mipi_phy_if_0_data_n;
   wire [1:0]mipi_phy_if_0_data_p;
   wire [0:0]rpi_enable;
+  wire [3:0]sw;
 
   IOBUF IIC_1_0_scl_iobuf
        (.I(IIC_1_0_scl_o),
@@ -60,5 +63,6 @@ module design_1_wrapper
         .mipi_phy_if_0_clk_p(mipi_phy_if_0_clk_p),
         .mipi_phy_if_0_data_n(mipi_phy_if_0_data_n),
         .mipi_phy_if_0_data_p(mipi_phy_if_0_data_p),
-        .rpi_enable(rpi_enable));
+        .rpi_enable(rpi_enable),
+        .sw(sw));
 endmodule

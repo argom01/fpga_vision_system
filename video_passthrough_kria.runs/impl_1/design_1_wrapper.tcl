@@ -143,8 +143,11 @@ OPTRACE "add files" START { }
   add_files -quiet C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
+  read_ip -quiet C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.srcs/sources_1/ip/rgb2hsv_0/rgb2hsv_0.xci
+  read_ip -quiet C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.srcs/sources_1/ip/lut_binary/lut_binary.xci
+  read_ip -quiet C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.srcs/sources_1/ip/lut/lut.xci
   add_files C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.srcs/sources_1/bd/design_1/design_1.bd
-  read_ip -quiet C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.srcs/sources_1/ip/rgb2ycbcr_0/rgb2ycbcr_0.xci
+  read_ip -quiet C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.srcs/sources_1/ip/rgb2ycbcr_1/rgb2ycbcr_1.xci
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.srcs/constrs_1/imports/project_4/kria.xdc
@@ -306,4 +309,35 @@ OPTRACE "route_design write_checkpoint" END { }
 
 OPTRACE "route_design misc" END { }
 OPTRACE "Phase: Route Design" END { }
+OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
+OPTRACE "write_bitstream setup" START { }
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+OPTRACE "read constraints: write_bitstream" START { }
+OPTRACE "read constraints: write_bitstream" END { }
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+  catch { write_mem_info -force -no_partial_mmi design_1_wrapper.mmi }
+OPTRACE "write_bitstream setup" END { }
+OPTRACE "write_bitstream" START { }
+  write_bitstream -force design_1_wrapper.bit 
+OPTRACE "write_bitstream" END { }
+OPTRACE "write_bitstream misc" START { }
+OPTRACE "read constraints: write_bitstream_post" START { }
+OPTRACE "read constraints: write_bitstream_post" END { }
+  catch {write_debug_probes -quiet -force design_1_wrapper}
+  catch {file copy -force design_1_wrapper.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "write_bitstream misc" END { }
+OPTRACE "Phase: Write Bitstream" END { }
 OPTRACE "impl_1" END { }

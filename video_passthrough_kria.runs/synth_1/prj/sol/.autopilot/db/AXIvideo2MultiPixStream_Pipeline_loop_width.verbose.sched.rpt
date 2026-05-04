@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'AXIvideo2MultiPixStream_Pipeline_loop_width'
 ================================================================
-* Date:           Sun Apr 26 22:48:49 2026
+* Date:           Mon May  4 01:55:34 2026
 
 * Version:        2022.2 (Build 3670227 on Oct 13 2022)
 * Project:        prj
@@ -160,7 +160,7 @@ The critical path consists of the following:
  <State 2>: 1.86ns
 The critical path consists of the following:
 	'load' operation ('axi.data.V') on local variable 'axi.data.V' [59]  (0 ns)
-	'select' operation ('select_ln835', C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:835) [63]  (0.403 ns)
+	'select' operation ('select_ln835_1', C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:835) [65]  (0.403 ns)
 	fifo write operation ('write_ln849', C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:849) on port 'srcYUV' (C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.runs/synth_1/prj/sol/.autopilot/db/v_tpg.cpp:849) [68]  (1.46 ns)
 
 

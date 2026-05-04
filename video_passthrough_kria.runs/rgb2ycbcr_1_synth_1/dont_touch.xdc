@@ -4,17 +4,17 @@
 # IP: C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.srcs/sources_1/ip/rgb2ycbcr_1/rgb2ycbcr_1.xci
 # IP: The module: 'rgb2ycbcr_1' is the root of the design. Do not add the DONT_TOUCH constraint.
 
-# IP: c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/ip/rgb2ycbcr_1/src/mult_gen_0/mult_gen_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mult_gen_0 || ORIG_REF_NAME==mult_gen_0} -quiet] -quiet
+# IP: c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/ip/rgb2ycbcr_1/src/adder_0/adder_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adder_0 || ORIG_REF_NAME==adder_0} -quiet] -quiet
 
-# IP: c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/ip/rgb2ycbcr_1/src/c_addsub_0/c_addsub_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==c_addsub_0 || ORIG_REF_NAME==c_addsub_0} -quiet] -quiet
+# IP: c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/ip/rgb2ycbcr_1/src/multiplier_0/multiplier_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==multiplier_0 || ORIG_REF_NAME==multiplier_0} -quiet] -quiet
 
 # IP: C:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.srcs/sources_1/ip/rgb2ycbcr_1/rgb2ycbcr_1.xci
 # IP: The module: 'rgb2ycbcr_1' is the root of the design. Do not add the DONT_TOUCH constraint.
 
-# IP: c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/ip/rgb2ycbcr_1/src/mult_gen_0/mult_gen_0.xci
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mult_gen_0 || ORIG_REF_NAME==mult_gen_0} -quiet] -quiet
+# IP: c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/ip/rgb2ycbcr_1/src/adder_0/adder_0.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adder_0 || ORIG_REF_NAME==adder_0} -quiet] -quiet
 
-# IP: c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/ip/rgb2ycbcr_1/src/c_addsub_0/c_addsub_0.xci
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==c_addsub_0 || ORIG_REF_NAME==c_addsub_0} -quiet] -quiet
+# IP: c:/Users/hhhh/rekonfigi/video_passthrough_kria/video_passthrough_kria.gen/sources_1/ip/rgb2ycbcr_1/src/multiplier_0/multiplier_0.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==multiplier_0 || ORIG_REF_NAME==multiplier_0} -quiet] -quiet

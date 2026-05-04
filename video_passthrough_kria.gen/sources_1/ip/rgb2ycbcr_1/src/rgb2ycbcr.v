@@ -56,21 +56,21 @@ module rgb2ycbcr(
     wire signed [35:0] YG_out;
     wire signed [35:0] YB_out;
 
-    mult_gen_0 mult_YR (
+    multiplier_0 mult_YR (
         .CLK(clk),
         .A(R),
         .B(YR_coef),
         .P(YR_out)
         );
         
-    mult_gen_0 mult_YG (
+    multiplier_0 mult_YG (
         .CLK(clk),
         .A(G),
         .B(YG_coef),
         .P(YG_out)
         );
         
-    mult_gen_0 mult_YB (
+    multiplier_0 mult_YB (
         .CLK(clk),
         .A(B),
         .B(YB_coef),
@@ -81,21 +81,21 @@ module rgb2ycbcr(
     wire signed [35:0] CbG_out;
     wire signed [35:0] CbB_out;
 
-    mult_gen_0 mult_CbR (
+    multiplier_0 mult_CbR (
         .CLK(clk),
         .A(R),
         .B(CbR_coef),
         .P(CbR_out)
         );
         
-    mult_gen_0 mult_CbG (
+    multiplier_0 mult_CbG (
         .CLK(clk),
         .A(G),
         .B(CbG_coef),
         .P(CbG_out)
         );
     
-    mult_gen_0 mult_CbB (
+    multiplier_0 mult_CbB (
         .CLK(clk),
         .A(B),
         .B(CbB_coef),
@@ -106,21 +106,21 @@ module rgb2ycbcr(
     wire signed [35:0] CrG_out;
     wire signed [35:0] CrB_out;
         
-    mult_gen_0 mult_CrR (
+    multiplier_0 mult_CrR (
         .CLK(clk),
         .A(R),
         .B(CrR_coef),
         .P(CrR_out)
         );
         
-    mult_gen_0 mult_CrG (
+    multiplier_0 mult_CrG (
         .CLK(clk),
         .A(G),
         .B(CrG_coef),
         .P(CrG_out)
         );
         
-    mult_gen_0 mult_CrB (
+    multiplier_0 mult_CrB (
         .CLK(clk),
         .A(B),
         .B(CrB_coef),
@@ -144,21 +144,21 @@ module rgb2ycbcr(
     wire signed [8:0] Y_out2;
     wire signed [8:0] Y;
         
-    c_addsub_0 add_Y1 (
+    adder_0 add_Y1 (
         .CLK(clk),
         .A({YR_out[35], YR_out[24:17]}),
         .B({YG_out[35], YG_out[24:17]}),
         .S(Y_out1)
         );
     
-    c_addsub_0 add_Y2 (
+    adder_0 add_Y2 (
         .CLK(clk),
         .A(Y_out1),
         .B({YB_out_delay[35], YB_out_delay[24:17]}),
         .S(Y_out2)
         );
         
-    c_addsub_0 add_Y3 (
+    adder_0 add_Y3 (
         .CLK(clk),
         .A(Y_out2),
         .B(0),
@@ -181,21 +181,21 @@ module rgb2ycbcr(
     wire signed [8:0] Cb_out2;
     wire signed [8:0] Cb;
     
-    c_addsub_0 add_Cb1 (
+    adder_0 add_Cb1 (
         .CLK(clk),
         .A({CbR_out[35], CbR_out[24:17]}),
         .B({CbG_out[35], CbG_out[24:17]}),
         .S(Cb_out1)
         );
     
-    c_addsub_0 add_Cb2 (
+    adder_0 add_Cb2 (
         .CLK(clk),
         .A(Cb_out1),
         .B({CbB_out_delay[35], CbB_out_delay[24:17]}),
         .S(Cb_out2)
         );
         
-    c_addsub_0 add_Cb3 (
+    adder_0 add_Cb3 (
         .CLK(clk),
         .A(Cb_out2),
         .B(128),
@@ -218,21 +218,21 @@ module rgb2ycbcr(
     wire signed [8:0] Cr_out2;
     wire signed [8:0] Cr;
         
-    c_addsub_0 add_Cr1 (
+    adder_0 add_Cr1 (
         .CLK(clk),
         .A({CrR_out[35], CrR_out[24:17]}),
         .B({CrG_out[35], CrG_out[24:17]}),
         .S(Cr_out1)
         );
         
-    c_addsub_0 add_Cr2 (
+    adder_0 add_Cr2 (
         .CLK(clk),
         .A(Cr_out1),
         .B({CrB_out_delay[35], CrB_out_delay[24:17]}),
         .S(Cr_out2)
         );
         
-    c_addsub_0 add_Cr3 (
+    adder_0 add_Cr3 (
         .CLK(clk),
         .A(Cr_out2),
         .B(128),
