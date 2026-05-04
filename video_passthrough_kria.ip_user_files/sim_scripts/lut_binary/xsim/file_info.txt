@@ -1,2 +1,0 @@
-lut_binary.v,verilog,xil_defaultlib,../../../../video_passthrough_kria.gen/sources_1/ip/lut_binary/sim/lut_binary.v,
-glbl.v,Verilog,xil_defaultlib,glbl.v

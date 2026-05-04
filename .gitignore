@@ -1,0 +1,38 @@
+# General Vivado junk
+*.log
+*.jou
+*.str
+*.backup
+*.tmp
+
+# Simulation / build outputs
+*.wdb
+*.wcfg
+*.pb
+*.runs/
+*.sim/
+*.cache/
+*.hw/
+*.ip_user_files/
+
+# Project-level generated folders
+*.gen/
+*.xsim/
+*.ipcache/
+
+# Reports (optional, but usually noise)
+*.rpt
+*.dcp
+
+# Bitstreams (usually too big, regenerate instead)
+*.bit
+*.bin
+
+# SDK / Vitis leftovers if you touched them
+.sdk/
+.vitis/
+*.sdk/
+
+# OS nonsense
+.DS_Store
+Thumbs.db
