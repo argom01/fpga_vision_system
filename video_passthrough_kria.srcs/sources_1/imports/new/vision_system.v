@@ -143,6 +143,33 @@ module vision_system(
     assign hsync_mux[4] = hsync_mux[3];
     assign vsync_mux[4] = vsync_mux[3];
     
+    wire [11:0] centroid_x;
+    wire [11:0] centroid_y;
+    
+    centroid centroid (
+        .clk(clk),
+        .de(de_mux[4]),
+        .hsync(hsync_mux[4]),
+        .vsync(vsync_mux[4]),
+        .mask(rgb_mux[4][0]),
+        .centroid_x(centroid_x),
+        .centroid_y(centroid_y)
+        );
+        
+    vis_centroid vis_centroid (
+        .clk(clk),
+        .de(de_mux[4]),
+        .hsync(hsync_mux[4]),
+        .vsync(vsync_mux[4]),
+        .pixel_in(rgb_mux[4]),
+        .x(centroid_x),
+        .y(centroid_y),
+        .pixel_out(rgb_mux[5]),
+        .de_out(de_mux[5]),
+        .hsync_out(hsync_mux[5]),
+        .vsync_out(vsync_mux[5])
+        );
+        
     //hsv_out
     
     rgb2hsv_0 rgb2hsv (
@@ -150,12 +177,12 @@ module vision_system(
         .de_in(de_in),
         .hsync_in(hsync_in),
         .vsync_in(vsync_in),
-        .de_out(de_mux[5]),
-        .hsync_out(hsync_mux[5]),
-        .vsync_out(vsync_mux[5]),
+        .de_out(de_mux[15]),
+        .hsync_out(hsync_mux[15]),
+        .vsync_out(vsync_mux[15]),
         
         .pixel_in(pixel_in),
-        .pixel_out(rgb_mux[5])
+        .pixel_out(rgb_mux[15])
         );
     
     //output

@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 05/04/2026 10:31:46 AM
+// Create Date: 05/10/2026 10:57:47 PM
 // Design Name: 
-// Module Name: centroid
+// Module Name: vis_centroid
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,29 +20,36 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module centroid(
+module vis_centroid(
     input clk,
     input de,
     input hsync,
     input vsync,
-    input mask,
+    input [23:0] pixel_in,
     
-    output [11:0] centroid_x,
-    output [11:0] centroid_y
+    input [11:0] x,
+    input [11:0] y,
+    
+    output [23:0] pixel_out,
+    output de_out,
+    output hsync_out,
+    output vsync_out
     );
-    
     localparam IMG_H = 12'd60;
     localparam IMG_W = 12'd60;
     
     reg [11:0] x_pos = 0;
     reg [11:0] y_pos = 0;
     
-    reg prev_vsync = 0;
-    
-    wire eof;
+    reg de_reg;
+    reg hsync_reg;
+    reg vsync_reg;
     
     always @(posedge clk) begin
-        prev_vsync <= vsync;
+        de_reg <= de;
+        hsync_reg <= hsync;
+        vsync_reg <= vsync;
+    
         if (vsync == 1) begin
             x_pos <= 0;
             y_pos <= 0;
@@ -57,17 +64,8 @@ module centroid(
         if (y_pos >= IMG_H - 1) y_pos <= 0;
     end
     
-    assign eof = (prev_vsync == 1'b1 && vsync == 1'b1) ? 1'b1 : 1'b0;
-    
-    calc_avg calc_avg (
-        .clk(clk),
-        .x(x_pos),
-        .y(y_pos),
-        .ce(mask & de),
-        .rst(eof),
-        
-        .x_avg(centroid_x),
-        .y_avg(centroid_y)
-        );
-    
+    assign pixel_out = ((x_pos == x) || (y_pos == y)) ? {8'hff, 8'h00, 8'h00} : pixel_in;
+    assign de_out = de_reg;
+    assign hsync_out = hsync_reg;
+    assign vsync_out = vsync_reg;
 endmodule
