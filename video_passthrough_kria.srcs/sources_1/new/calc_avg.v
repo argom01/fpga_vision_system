@@ -63,7 +63,7 @@ module calc_avg(
         
     divider_32_21_0 div_x (
         .clk(clk),
-        .start(prev_rst),
+        .start(rst),
         .dividend({1'b0, m10}),
         .divisor(m00),
         .quotient(x_div_out),
@@ -75,7 +75,7 @@ module calc_avg(
         
     divider_32_21_0 div_y (
         .clk(clk),
-        .start(prev_rst),
+        .start(rst),
         .dividend({1'b0, m01}),
         .divisor(m00),
         .quotient(y_div_out),
@@ -84,11 +84,8 @@ module calc_avg(
         
     reg [11:0] x_reg;
     reg [11:0] y_reg;
-    
-    reg prev_rst = 0;
-    
+        
     always @(posedge clk) begin
-        prev_rst <= rst;
         if (x_ready) begin 
             x_reg <= x_div_out[11:0];
         end;

@@ -20,7 +20,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module centroid(
+module centroid #(
+    parameter IMG_W = 64,
+    parameter IMG_H = 64
+)(
     input clk,
     input de,
     input hsync,
@@ -30,9 +33,6 @@ module centroid(
     output [11:0] centroid_x,
     output [11:0] centroid_y
     );
-    
-    localparam IMG_H = 12'd60;
-    localparam IMG_W = 12'd60;
     
     reg [11:0] x_pos = 0;
     reg [11:0] y_pos = 0;
@@ -57,7 +57,7 @@ module centroid(
         if (y_pos >= IMG_H - 1) y_pos <= 0;
     end
     
-    assign eof = (prev_vsync == 1'b1 && vsync == 1'b1) ? 1'b1 : 1'b0;
+    assign eof = (prev_vsync == 1'b0 && vsync == 1'b1) ? 1'b1 : 1'b0;
     
     calc_avg calc_avg (
         .clk(clk),

@@ -146,30 +146,72 @@ module vision_system(
     wire [11:0] centroid_x;
     wire [11:0] centroid_y;
     
-    centroid centroid (
+    //5x5median_out
+    
+    median5x5 # (
+        .H_SIZE(2200)
+    ) median_filter (
         .clk(clk),
-        .de(de_mux[4]),
-        .hsync(hsync_mux[4]),
-        .vsync(vsync_mux[4]),
+        .de_in(de_mux[4]),
+        .hsync_in(hsync_mux[4]),
+        .vsync_in(vsync_mux[4]),
         .mask(rgb_mux[4][0]),
+        .de_out(de_mux[5]),
+        .hsync_out(hsync_mux[5]),
+        .vsync_out(vsync_mux[5]),
+        .pixel_out(rgb_mux[5])
+        );
+    
+    //centroid_out
+    
+    centroid # (
+        .IMG_W(1920),
+        .IMG_H(1080)
+    ) centroid (
+        .clk(clk),
+        .de(de_mux[5]),
+        .hsync(hsync_mux[5]),
+        .vsync(vsync_mux[5]),
+        .mask(rgb_mux[5][0]),
         .centroid_x(centroid_x),
         .centroid_y(centroid_y)
         );
         
-    vis_centroid vis_centroid (
+    vis_centroid # (
+        .IMG_W(1920),
+        .IMG_H(1080)
+    ) vis_centroid (
         .clk(clk),
-        .de(de_mux[4]),
-        .hsync(hsync_mux[4]),
-        .vsync(vsync_mux[4]),
-        .pixel_in(rgb_mux[4]),
+        .de(de_mux[5]),
+        .hsync(hsync_mux[5]),
+        .vsync(vsync_mux[5]),
+        .pixel_in(rgb_mux[5]),
         .x(centroid_x),
         .y(centroid_y),
-        .pixel_out(rgb_mux[5]),
-        .de_out(de_mux[5]),
-        .hsync_out(hsync_mux[5]),
-        .vsync_out(vsync_mux[5])
+        .pixel_out(rgb_mux[6]),
+        .de_out(de_mux[6]),
+        .hsync_out(hsync_mux[6]),
+        .vsync_out(vsync_mux[6])
         );
-        
+    
+    vis_centroid_circle # (
+        .IMG_W(1920),
+        .IMG_H(1080),
+        .RADIUS_PX(3)
+    ) vis_centroid_circle (
+        .clk(clk),
+        .de(de_mux[5]),
+        .hsync(hsync_mux[5]),
+        .vsync(vsync_mux[5]),
+        .pixel_in(rgb_mux[5]),
+        .x(centroid_x),
+        .y(centroid_y),
+        .pixel_out(rgb_mux[7]),
+        .de_out(de_mux[7]),
+        .hsync_out(hsync_mux[7]),
+        .vsync_out(vsync_mux[7])
+        );
+                
     //hsv_out
     
     rgb2hsv_0 rgb2hsv (

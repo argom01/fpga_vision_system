@@ -1,36 +1,36 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"1.25",
-   "Default View_TopLeft":"-50,-20",
+   "Default View_ScaleFactor":"0.749623",
+   "Default View_TopLeft":"-362,-830",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port IIC_1_0 -pg 1 -lvl 4 -x 1060 -y 220 -defaultsOSRD
+preplace port IIC_1_0 -pg 1 -lvl 2 -x 1140 -y 1570 -defaultsOSRD -bot
 preplace port mipi_phy_if_0 -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD
-preplace portBus rpi_enable -pg 1 -lvl 4 -x 1060 -y 440 -defaultsOSRD
-preplace portBus sw -pg 1 -lvl 0 -x 0 -y 130 -defaultsOSRD
-preplace inst PS_0 -pg 1 -lvl 2 -x 560 -y 310 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 2 -x 560 -y 450 -defaultsOSRD
-preplace inst postprocess_0 -pg 1 -lvl 1 -x 200 -y 330 -defaultsOSRD
-preplace inst preprocess_0 -pg 1 -lvl 3 -x 910 -y 320 -defaultsOSRD
-preplace inst vision_system_0 -pg 1 -lvl 2 -x 560 -y 100 -defaultsOSRD -orient R180
-preplace netloc PS_0_clk_out1 1 2 1 730 150n
-preplace netloc PS_0_vid_active_video 1 2 1 740 110n
-preplace netloc PS_0_vid_data 1 2 1 N 320
-preplace netloc PS_0_vid_hsync 1 2 1 760 90n
-preplace netloc PS_0_vid_vsync 1 2 1 770 70n
-preplace netloc dp_live_video_in_pixel1_1 1 1 1 N 330
-preplace netloc preprocess_0_rgb 1 2 2 NJ 50 1030
-preplace netloc sw_1 1 0 3 20J -10 NJ -10 750
-preplace netloc vision_system_0_de_out 1 1 1 350 130n
-preplace netloc vision_system_0_hsync_out 1 1 1 340 110n
-preplace netloc vision_system_0_pixel_out 1 0 2 30 70 NJ
-preplace netloc vision_system_0_vsync_out 1 1 1 330 90n
-preplace netloc xlconstant_1_dout 1 2 2 NJ 450 1040
-preplace netloc mipi_phy_if_0_1 1 0 2 NJ 230 320
-preplace netloc zynq_ultra_ps_e_0_IIC_1 1 2 2 NJ 260 1040
-levelinfo -pg 1 0 200 560 910 1060
-pagesize -pg 1 -db -bbox -sgen -140 -150 1210 1460
+preplace portBus rpi_enable -pg 1 -lvl 4 -x 1490 -y 450 -defaultsOSRD
+preplace portBus sw -pg 1 -lvl 4 -x 1490 -y 130 -defaultsOSRD -right
+preplace inst PS_0 -pg 1 -lvl 2 -x 660 -y -510 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 2 -x 660 -y 446 -defaultsOSRD
+preplace inst postprocess_0 -pg 1 -lvl 1 -x 170 -y 330 -defaultsOSRD
+preplace inst preprocess_0 -pg 1 -lvl 3 -x 1350 -y 320 -defaultsOSRD
+preplace inst vision_system_0 -pg 1 -lvl 2 -x 660 -y -712 -defaultsOSRD -orient R180
+preplace netloc PS_0_clk_out1 1 2 1 1170 -662n
+preplace netloc PS_0_vid_active_video 1 2 1 1180 -702n
+preplace netloc PS_0_vid_data 1 2 1 1220 -500n
+preplace netloc PS_0_vid_hsync 1 2 1 1200 -722n
+preplace netloc PS_0_vid_vsync 1 2 1 1210 -742n
+preplace netloc dp_live_video_in_pixel1_1 1 1 1 300 -490n
+preplace netloc preprocess_0_rgb 1 2 2 NJ -762 1470
+preplace netloc sw_1 1 2 2 1230 130 N
+preplace netloc vision_system_0_de_out 1 1 1 330 -682n
+preplace netloc vision_system_0_hsync_out 1 1 1 320 -702n
+preplace netloc vision_system_0_pixel_out 1 0 2 20 -742 NJ
+preplace netloc vision_system_0_vsync_out 1 1 1 310 -722n
+preplace netloc xlconstant_1_dout 1 2 2 NJ 446 1470
+preplace netloc mipi_phy_if_0_1 1 0 2 NJ 230 290
+preplace netloc zynq_ultra_ps_e_0_IIC_1 1 2 1 1190J -560n
+levelinfo -pg 1 0 170 660 1350 1490
+pagesize -pg 1 -db -bbox -sgen -140 -960 1640 1660
 "
 }
 0
