@@ -54,7 +54,6 @@ module median5x5 # (
     
     reg [2:0] S1, S2, S3, S4, S5;
     reg [4:0] sum;
-    reg context_valid;
     
     always @(posedge clk) begin
         D11 <= {vsync_in, hsync_in, de_in, mask};
@@ -78,13 +77,13 @@ module median5x5 # (
         S5 <= D51[0] + D52[0] + D53[0] + D54[0] + D55[0];
         
         sum <= S1 + S2 + S3 + S4 + S5;
-        
-        context_valid <= D11[1] & D12[1] & D13[1] & D14[1] & D15[1] &
+    end
+    
+    wire context_valid = D11[1] & D12[1] & D13[1] & D14[1] & D15[1] &
                          D21[1] & D22[1] & D23[1] & D24[1] & D25[1] &
                          D31[1] & D32[1] & D33[1] & D34[1] & D35[1] &
                          D41[1] & D42[1] & D43[1] & D44[1] & D45[1] &
                          D51[1] & D52[1] & D53[1] & D54[1] & D55[1];
-    end
     
     wire mask_new = sum > 5'd12 ? 1 : 0;
     

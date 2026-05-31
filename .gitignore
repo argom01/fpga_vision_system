@@ -4,6 +4,8 @@
 *.str
 *.backup
 *.tmp
+.metadata/
+.analytics/
 
 # Simulation / build outputs
 *.wdb
