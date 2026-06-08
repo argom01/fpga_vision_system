@@ -34,6 +34,14 @@ module vision_system(
     output [23:0]pixel_out
     );
     
+    localparam H_SIZE = 2200;
+    localparam WIDTH = 1920;
+    localparam HEIGHT = 1080;
+    
+//    localparam H_SIZE = 83;
+//    localparam WIDTH = 64;
+//    localparam HEIGHT = 64;
+    
     wire [23:0] rgb_mux [15:0];
     wire de_mux[15:0];
     wire hsync_mux[15:0];
@@ -128,11 +136,10 @@ module vision_system(
         
     //ycbcr_bin_out
     
-    localparam Ta = 8'd77;
-    localparam Tb = 8'd127;
-    localparam Tc = 8'd133;
-    //localparam Tc = 8'd130;
-    localparam Td = 8'd173;
+    localparam Ta = 8'd70;
+    localparam Tb = 8'd130;
+    localparam Tc = 8'd55;
+    localparam Td = 8'd110;
     
     wire [7:0] Cb = rgb_mux[3][15:8];
     wire [7:0] Cr = rgb_mux[3][7:0];
@@ -150,7 +157,7 @@ module vision_system(
     //5x5median_out
     
     median5x5 # (
-        .H_SIZE(2200)
+        .H_SIZE(H_SIZE)
     ) median_filter (
         .clk(clk),
         .de_in(de_mux[4]),
@@ -168,7 +175,7 @@ module vision_system(
     wire [2:0] opening_sync;
     
     erosion5x5 # (
-        .H_SIZE(83)
+        .H_SIZE(H_SIZE)
     ) erosion_opening (
         .clk(clk),
         .de_in(de_mux[4]),
@@ -182,7 +189,7 @@ module vision_system(
         );
     
     dilation5x5 # (
-        .H_SIZE(83)
+        .H_SIZE(H_SIZE)
     ) dilation_opening (
         .clk(clk),
         .de_in(opening_sync[0]),
@@ -200,7 +207,7 @@ module vision_system(
     wire [2:0] closing_sync;
     
     dilation5x5 # (
-        .H_SIZE(83)
+        .H_SIZE(H_SIZE)
     ) dilation_closing (
         .clk(clk),
         .de_in(de_mux[4]),
@@ -214,7 +221,7 @@ module vision_system(
         );
     
     erosion5x5 # (
-        .H_SIZE(83)
+        .H_SIZE(H_SIZE)
     ) erosion_closing (
         .clk(clk),
         .de_in(closing_sync[0]),
@@ -230,8 +237,8 @@ module vision_system(
     //centroid_out
     
     centroid # (
-        .IMG_W(1920),
-        .IMG_H(1080)
+        .IMG_W(WIDTH),
+        .IMG_H(HEIGHT)
     ) centroid (
         .clk(clk),
         .de(de_mux[5]),
@@ -243,8 +250,8 @@ module vision_system(
         );
         
     vis_centroid # (
-        .IMG_W(1920),
-        .IMG_H(1080)
+        .IMG_W(WIDTH),
+        .IMG_H(HEIGHT)
     ) vis_centroid (
         .clk(clk),
         .de(de_mux[5]),
@@ -260,8 +267,8 @@ module vision_system(
         );
     
     vis_centroid_circle # (
-        .IMG_W(1920),
-        .IMG_H(1080),
+        .IMG_W(WIDTH),
+        .IMG_H(HEIGHT),
         .RADIUS_PX(5)
     ) vis_centroid_circle (
         .clk(clk),
@@ -285,8 +292,8 @@ module vision_system(
     wire [11:0] right;
     
     bbox # (
-        .IMG_W(64),
-        .IMG_H(64)
+        .IMG_W(WIDTH),
+        .IMG_H(HEIGHT)
     ) bbox (
         .clk(clk),
         .de(de_mux[5]),
@@ -300,8 +307,8 @@ module vision_system(
         );
         
     bbox_vis # (
-        .IMG_W(64),
-        .IMG_H(64)
+        .IMG_W(WIDTH),
+        .IMG_H(HEIGHT)
     ) bbox_vis (
         .clk(clk),
         .de(de_mux[5]),
@@ -320,7 +327,7 @@ module vision_system(
         
     // 3x3 filter
     filter3x3 # (
-        .H_SIZE(2200)
+        .H_SIZE(H_SIZE)
     ) filter3x3 (
         .clk(clk),
         .de_in(de_mux[3]),
@@ -331,6 +338,21 @@ module vision_system(
         .hsync_out(hsync_mux[11]),
         .vsync_out(vsync_mux[11]),
         .pixel_out(rgb_mux[11])
+        );
+        
+    //sobel
+    sobel_0 # (
+        .H_SIZE(H_SIZE)
+        ) sobel_0 (
+        .clk(clk),
+        .de_in(de_mux[3]),
+        .hsync_in(hsync_mux[3]),
+        .vsync_in(vsync_mux[3]),
+        .pixel_in(rgb_mux[3]),
+        .de_out(de_mux[12]),
+        .hsync_out(hsync_mux[12]),
+        .vsync_out(vsync_mux[12]),
+        .pixel_out(rgb_mux[12])
         );
                 
     //hsv_out

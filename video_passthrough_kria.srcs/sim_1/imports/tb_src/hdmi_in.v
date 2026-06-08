@@ -119,7 +119,7 @@ begin
 	 //TB only
 	 vsc=vsc+1;
 
-    rgbfile = $fopen("C:/Users/hhhh/rekonfigi/video_passthrough_kria/dlon.ppm","rb");
+    rgbfile = $fopen("C:/Users/hhhh/rekonfigi/video_passthrough_kria/studia_64.ppm","rb");
 
 	 // read header file
 	 for(i=0;i<13;i=i+1)

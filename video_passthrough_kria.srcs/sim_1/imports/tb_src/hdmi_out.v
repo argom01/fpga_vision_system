@@ -10,10 +10,14 @@ module hdmi_out
   input hdmi_clk,
   input hdmi_vs,
   input hdmi_de,
-  input [31:0] hdmi_data
+  input [31:0] hdmi_data,
+  output [3:0] sw_out
 );
 //-----------------------------------------------
 integer fm1=0;
+
+reg [3:0] sw = 4'b0000;
+assign sw_out = sw;
 
 // TK invert du to Zybo
 wire w_hdmi_vs_i = !hdmi_vs;
@@ -32,6 +36,7 @@ begin
   if((w_hdmi_vs_i==1'b0)&&(vse==1'b1))
   begin
     $fclose(fm1);
+    sw <= sw + 1;
     //$stop;
   end
   

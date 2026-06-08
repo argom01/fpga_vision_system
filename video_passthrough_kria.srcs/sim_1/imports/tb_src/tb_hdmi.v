@@ -24,7 +24,8 @@ module tb_hdmi(
 
 wire rx_pclk;
 
-wire [3:0] sw = 4'b1001;
+wire [3:0] sw = 4'b0100;
+wire [3:0] sw_t;
 
 wire rx_de;
 wire rx_hsync;
@@ -45,7 +46,7 @@ wire [7:0] tx_blue;
 // --------------------------------------
 // HDMI input
 // --------------------------------------
-hdmi_in file_input (
+hdmi_in_full_hd file_input (
     .hdmi_clk(rx_pclk), 
     .hdmi_de(rx_de), 
     .hdmi_hs(rx_hsync), 
@@ -76,11 +77,12 @@ vision_system vision_system (
 // --------------------------------------
 // HDMI output
 // --------------------------------------
-hdmi_out file_output (
+hdmi_out_full_hd file_output (
     .hdmi_clk(rx_pclk), 
     .hdmi_vs(tx_vsync), 
     .hdmi_de(tx_de), 
-    .hdmi_data({8'b0,tx_red,tx_green,tx_blue})
+    .hdmi_data({8'b0,tx_red,tx_green,tx_blue}),
+    .sw_out(sw_t)
     );
 
 endmodule

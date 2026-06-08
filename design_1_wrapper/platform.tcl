@@ -41,3 +41,6 @@ platform config -updatehw {C:/Users/hhhh/rekonfigi/video_passthrough_kria/design
 platform generate -domains 
 platform config -updatehw {C:/Users/hhhh/rekonfigi/video_passthrough_kria/design_1_wrapper.xsa}
 platform generate -domains 
+platform active {design_1_wrapper}
+platform config -updatehw {C:/Users/hhhh/rekonfigi/video_passthrough_kria/design_1_wrapper.xsa}
+platform generate -domains 
